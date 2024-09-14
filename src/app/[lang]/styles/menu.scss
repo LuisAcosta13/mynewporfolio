@@ -1,0 +1,61 @@
+@import "config";
+
+.menu {
+    //background-color: $base-color2;
+    //box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.15);
+    color: $base-color8;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+    z-index: 9999;
+    mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%); /* Gradiente de máscara */
+            mask-size: 100% 100%;
+        background: linear-gradient(
+        to top, 
+        rgba(255, 255, 255, 0.1) 0%,
+        rgba(255, 255, 255, 0.02) 40%,
+        transparent 100%
+        );
+    backdrop-filter: blur(10px);
+
+    .padding {
+        padding: 20px 100px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu-logo {
+        color: $base-color8;
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+
+        .dark-mode{
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .menu {
+        .padding {
+            padding: 20px 20px;
+
+            .buttons {
+                gap: 10px;
+            }
+        }
+    }
+
+}

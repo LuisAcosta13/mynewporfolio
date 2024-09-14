@@ -1,0 +1,48 @@
+{
+    "name": "Luis Acosta",
+    "rol": "Frontend Developer",
+    "about_title": "Who am I",
+    "about": "<p>I'm a Frontend Developer working from Argentina.</p> <p>I'm an experienced, responsible and resorceful person with great leadership and empathy skills, teamwork, problem solving, creativity and a great desire to learn and guide others.</p> <p>I studied as a Full Stack developer at Henry's bootcamp, perfecting my Front-End and Back-End bases, acquiring knowledge in React.js, Redux, Node.js, Express.js, PostgreSQL and Sequelize, and adding an excellent use of Javascript, with its libraries and frameworks.</p> <p>My latest experience as a Frontend Dev allowed me to participate in projects for american and french enterprises using my Javascript and SASS knowledge, integrating my work with backend and design team.</p>",
+    "recommendations": [
+        {
+            "name": "Gabriele Capocelli",
+            "rol": "Canari Studio - PHP Backend Developer",
+            "text": "Luis is a reliable professional, extremely meticulous in his work, always active and participatory in the team in which I was lucky enough to manage him, collaborative with colleagues and absolutely always in time with deadlines. In addition to these characteristics, he is a smart and nice person. I highly recommend it for integrating existing teams but also as a freelancer."
+        },
+        {
+            "name": "Daniel Henderson",
+            "rol": "data.ai - Digital Marketing Director",
+            "text": "Luis was a wonderful partner in our website management at data.ai. He had a very ambitious personality and a great sense of urgency to projects with quick deadlines. I could always rely on Luis to be responsive and quick to take action. When given proper details, Luis could run with website tickets on his own without extensive guidance. It was a pleasure working with Luis and I highly recommend him not just for the skills he has but for his attitude and dedication he gives to his work."
+        }, 
+        {
+            "name": "Rosibel Mendoza",
+            "rol": "FullStack Developer - SoyHenry Bootcamp",
+            "text": "Respectful, responsible, perfectionist and very professional, he's always looking foward to give his best and encourages his environment to follow the leed. His skills allow him to lead a team but he also works fine following comand. He always seeks to learn new things and shares his knowledge with his peers. Definetly he's a must have in any team."
+        },
+        {
+            "name": "Alejandro Morales",
+            "rol": "FullStack Developer - SoyHenry Bootcamp",
+            "text": "He is a highly skilled and dedicated individual who maintains a high standard of work and is always willing to contribute to solving problems for his colleagues. Personally, I value his enthusiasm and creativity in the work he does."
+        },
+        {
+            "name": "Bernardo Broscheit",
+            "rol": "FullStack Developer - SoyHenry Bootcamp",
+            "text": "I worked with Luis throughout the Henry Bootcamp, and during the course, he consistently demonstrated that he is a supportive, fun, creative, and eager learner. His curiosity, proactivity, and adaptability were also key in tackling the challenges of the final project. I have no doubt that he can excel in a professional environment and bring many additional skills to the table."
+        },
+        {
+            "name": "Bárbara Miranda",
+            "rol": "FullStack Developer Student - SoyHenry Bootcamp",
+            "text": "I had the pleasure of going through my SoyHenry course with Luis, who was my Teaching Assistant. He was distinguished by his patience, support, positivity, and as a great web developer who always knew how to answer our questions!"
+        },
+        {
+            "name": "José Carlos Mestre",
+            "rol": "FullStack Developer Student - SoyHenry Bootcamp",
+            "text": "We met at SoyHenry. His help as a TA was excellent. He is a great person who supported both my colleagues and me, providing emotional support as well as technical assistance."
+        },
+        {
+            "name": "Claudio Di Toro",
+            "rol": "FullStack Developer Student - SoyHenry Bootcamp",
+            "text": "During the Henry course, Luis was my TA, demonstrating great leadership skills, extensive knowledge in Full Stack development, excellent interpersonal skills, and always willing to lend a hand to those in need."
+        }
+    ]
+}

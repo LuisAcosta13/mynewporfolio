@@ -1,0 +1,151 @@
+@import "config";
+
+.main-content {
+    margin: 0 0 50px 0;
+
+    .title-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0 100px 50px;
+
+        .title-text {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            font-family: serif;
+
+            .title-name {
+                font-size: 100px;
+                font-weight: 1000;
+                color: $base-color4;
+                overflow: hidden;
+                /* Oculta el texto que aún no se ha tipeado */
+                border-right: .15em solid rgb(49, 49, 49);
+                /* Simula el cursor de tipeo */
+                white-space: nowrap;
+                /* Evita que el texto se ajuste */
+                letter-spacing: .05em;
+                /* Espacio entre letras */
+                animation: typing 4s steps(40, end), blink-caret .75s step-end infinite;
+            }
+
+            .title-rol {
+                font-size: 35px;
+                color: $base-color8;
+            }
+        }
+    }
+
+    .about-content {
+        padding: 110px 200px 50px;
+        font-size: 25px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 80px;
+        background-color: rgba(105, 105, 105, 0.249);
+        box-shadow: 0px 5px 5px 5px rgba(0, 0, 0, 0.15);
+
+        .about-title {
+            font-size: 45px;
+            color: $base-color4;
+            margin-top: 0;
+
+            .about-text{
+                
+            }
+        }
+
+        .image-container{
+            position: relative;
+
+            &::before{
+                position: absolute;
+                top: -50px;
+                left: -50px;
+                content: "";
+                width: 600px;
+                height: 600px;
+                background-color: $base-color4;
+            }
+
+            img{
+                height: max-content;
+                position: relative;
+                z-index: 2;
+                filter: brightness(1.07) contrast(1.1);
+            }
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    .main-content {
+        margin: 0;
+
+        .title-content {
+            .title-text {
+                align-items: flex-start;
+                text-align: center;
+                gap: 10px;
+                flex-wrap: wrap;
+
+                .title-name {
+                    font-size: 40px;
+                }
+
+                .title-rol {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        .about-content {
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            padding: 110px 20px 50px;
+            font-size: 18px;
+            flex-wrap: wrap;
+
+            .image-container{
+                &::before{
+                    width: 250px;
+                    height: 250px;
+                    top: -30px;
+                    left: -30px
+                }
+
+                img{
+                    width: 250px;
+                    height: 250px;
+                }
+            }
+        }
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: rgb(38, 38, 38);
+    }
+}

@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+$base-color1:#e8e8e8;
+$base-color2: linear-gradient(90deg, rgba(0,63,135,1) 6%, rgba(135,186,226,1) 52%, rgba(230,230,230,1) 100%);
+$base-color3: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(3,0,69,1) 50%, rgba(0,5,184,1) 100%);
+$base-color4:#002488;
+$base-color5:#4d3bd0;
+$base-color6: #1b0c20;
+$base-color7: #a900e2;
+$base-color8: #000000;
+$base-color9:linear-gradient(154deg, rgb(143, 143, 143), rgb(88, 87, 87), rgb(143, 143, 143));
+
+body{
+    margin: 0;
+    background: $base-color2;
+    color: $base-color8;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+
+    &.dark{
+        background: $base-color3;
+        color: $base-color1;
+
+        .menu{
+            background-color: $base-color3;
+            color: $base-color1;
+
+            .menu-logo{
+                color: $base-color5
+            }
+        }
+
+        .main-content{
+            .title-content{
+                .title-text{
+                    .title-name{
+                        color: $base-color5;
+                    }
+
+                    .title-rol{
+                        color: $base-color1;
+                    }
+                }
+            }
+            .about-content{
+                .about-title{
+                    color: $base-color5;
+                }
+
+                .image-container{
+                    &:before{
+                        background-color: $base-color5;
+                    }
+                }
+            }
+
+            .slider-container{
+                .card{
+                    background: $base-color9;
+                }
+            }
+        }
+        
+    }
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    color: $base-color7;
+    text-decoration: none;
+
+    &:hover{
+        color: $base-color4;
+    }
+}

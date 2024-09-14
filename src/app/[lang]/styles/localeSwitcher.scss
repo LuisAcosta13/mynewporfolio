@@ -1,0 +1,30 @@
+.flag-container{
+    position: relative;
+
+    
+}
+
+.languages{
+    display: none;
+    position: absolute;
+    background-color: white;
+    padding: 10px;
+    left: -10px;
+    width: max-content;
+    border-radius: 12px;
+
+    &.open{
+        display: block;
+    }
+
+    a{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 10px;
+    }
+
+    img{
+        width: 100%;
+    }
+}
