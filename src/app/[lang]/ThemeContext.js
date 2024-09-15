@@ -1,12 +1,9 @@
-// ThemeContext.js
 "use client";
 
 import { createContext, useContext, useState, useEffect } from 'react';
 
-// Crear el contexto
 const ThemeContext = createContext();
 
-// Proveedor del contexto
 export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState('light');
 
@@ -15,7 +12,6 @@ export const ThemeProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    // Leer el tema desde localStorage solo en el cliente
     const storedTheme = localStorage.getItem('theme');
     if (storedTheme) {
       setTheme(storedTheme);
@@ -23,7 +19,6 @@ export const ThemeProvider = ({ children }) => {
   }, []);
 
   useEffect(() => {
-    // Guardar el tema en localStorage y ajustar lightsOn
     if (theme !== localStorage.getItem('theme')) {
       localStorage.setItem('theme', theme);
     }
@@ -37,5 +32,4 @@ export const ThemeProvider = ({ children }) => {
   );
 };
 
-// Hook para usar el contexto
 export const useTheme = () => useContext(ThemeContext);
