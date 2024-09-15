@@ -1,15 +1,22 @@
 import { i18n } from "../../../i18n-config";
 import "./styles/config.scss"
+import { ThemeProvider } from './ThemeContext';
 
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }));
 }
 
-export default function Root({children, params}) {
+export default function Root({ children, params }) {
   return (
+
     <html lang={params.lang}>
-      <body>{children}</body>
+      <body>
+        <ThemeProvider>
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
+
   );
 }
 
