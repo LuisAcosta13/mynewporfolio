@@ -24,8 +24,6 @@ export default function DarkModeBttn() {
             localStorage.setItem('theme', 'light');
             setDarkMdIcon(<IoMdMoon/>) 
         }
-
-        
     };
 
     return (

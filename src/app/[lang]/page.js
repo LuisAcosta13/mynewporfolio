@@ -12,6 +12,7 @@ export default async function IndexPage({params: { lang }}) {
     <div className="main-page">
       <Menu lang={lang} dictionary={dictionary}></Menu>
       <div className="main-content">
+        
         <Title dictionary={dictionary}/>
         <About dictionary={dictionary}/>
         <Reviews recommendations={dictionary.recommendations}/>
