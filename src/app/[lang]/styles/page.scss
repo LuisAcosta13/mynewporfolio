@@ -53,10 +53,6 @@
             font-size: 45px;
             color: $base-color4;
             margin-top: 0;
-
-            .about-text{
-                
-            }
         }
 
         .image-container{
@@ -70,9 +66,11 @@
                 width: 600px;
                 height: 600px;
                 background-color: $base-color4;
+                border-radius: 8px;
             }
 
             img{
+                border-radius: 8px;
                 height: max-content;
                 position: relative;
                 z-index: 2;
@@ -82,9 +80,9 @@
     }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1300px) {
     .main-content {
-        margin: 0;
+        margin: 0 20px;
 
         .title-content {
             .title-text {

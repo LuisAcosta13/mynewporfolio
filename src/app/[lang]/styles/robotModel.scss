@@ -3,3 +3,10 @@
     height: 100vh;
     cursor: pointer;
 }
+
+@media (max-width: 1300px) {
+    .robotModel{
+        width: 100%;
+        display: none;
+    }
+}

@@ -1,0 +1,104 @@
+@import "config.scss";
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 110px 150px 50px;
+
+    .skills_title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 0 100px;
+        text-align: center;
+
+        .subtitle{
+            color: $base-color4;
+            font-weight: bold;
+        }
+
+        .title{
+            position: relative;
+            font-size: 50px;
+            margin-top: 20px;
+            font-weight: bold;
+
+            &::after{
+                content: "";
+                position: absolute;
+                top: 150%;
+                //left: 50%;
+                right: 25%;
+                width: 50%;
+                height: 2px;
+                background-color: $base-color4;
+            }
+        }
+    }
+
+    .skills_list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+        gap: 15px;
+
+        .skill_card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            padding: 10px 20px;
+            width: 220px;
+            cursor: pointer;
+            text-align: center;
+            overflow: hidden;
+            box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.15);
+            border-radius: 8px;
+
+            &:nth-child(odd) {
+                background: linear-gradient(0deg, rgba(41, 35, 102, 0.8113446062018558) 30%, rgba(247, 247, 247, 0) 100%);
+            }
+
+            &:nth-child(even) {
+                background-color: rgba(105, 105, 105, 0.249);
+            }
+
+            .header {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 10px;
+                width: 100%;
+
+                .card_title{
+                    width: 100%;
+                    font-weight: bold;
+                }
+            }
+
+            .card_text {
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+            }
+        }
+
+        .skill_card:hover .card_text {
+            max-height: 500px;
+        }
+    }
+}
+
+@media (max-width: 1500px) {
+    .skills{
+        .skills_list{
+            flex-wrap: wrap;
+        }
+    }
+}

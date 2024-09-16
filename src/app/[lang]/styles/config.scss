@@ -15,7 +15,7 @@ body{
     background: $base-color2;
     color: $base-color8;
     font-family: "Ubuntu", sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     font-style: normal;
 
     &.dark{
@@ -61,6 +61,28 @@ body{
                 }
             }
         }
+
+        .skills{
+
+            .skills_title{
+                .subtitle{
+                    color: $base-color5;
+                }
+
+                .title{
+                    &::after{
+                        background-color: $base-color5;
+                    }
+                }
+            }
+
+            .skills_list .skill_card{
+
+                &:nth-child(even) {
+                    background: rgb(39, 39, 39);
+                }
+            }
+        } 
         
     }
 }

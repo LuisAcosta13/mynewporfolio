@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../../styles/reviews.scss"
 
-function Reviews({recommendations}) {
+function Reviews({ recommendations }) {
   const settings = {
     focusOnSelect: true,
     pauseOnFocus: false,
@@ -21,37 +21,33 @@ function Reviews({recommendations}) {
     cssEase: "linear",
     pauseOnHover: true,
     responsive: [
-        {
-          breakpoint: 1100,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            infinite: true,
-            dots: true
-          }
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
         }
+      }
     ]
   };
 
   return (
     <div className="slider-container">
-        <div class="blur-left"></div>
+      <div class="blur-left"></div>
       <Slider {...settings}>
-      
-      
-        {Object.values(recommendations).map((obj, index) => 
-            <div className="card" key={index}>
-                <div className="padding">
-                    <div className="header">
-                        <span className="header title">{obj.name}</span>
-                        <span className="header subtitle">{obj.rol}</span>
-                    </div>
-                    <p>{obj.text}</p>
-                </div>
+        {Object.values(recommendations).map((obj, index) =>
+          <div className="card" key={index}>
+            <div className="padding">
+              <div className="header">
+                <span className="header title">{obj.name}</span>
+                <span className="header subtitle">{obj.rol}</span>
+              </div>
+              <p>{obj.text}</p>
             </div>
+          </div>
         )}
-
-        
       </Slider>
       <div class="blur-right"></div>
     </div>

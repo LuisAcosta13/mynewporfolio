@@ -44,5 +44,36 @@
             "rol": "FullStack Developer Student - SoyHenry Bootcamp",
             "text": "During the Henry course, Luis was my TA, demonstrating great leadership skills, extensive knowledge in Full Stack development, excellent interpersonal skills, and always willing to lend a hand to those in need."
         }
-    ]
+    ],
+    "skills": {
+        "subtitle": "My services",
+        "title": "What I do.",
+        "list": [
+            {
+                "icon": "FaCode",
+                "title": "Frontend development",
+                "text": "Develop and maintain user-facing features for web applications using HTML, CSS, and JavaScript. Translate design mock-ups and wireframes into high-quality code."
+            },
+            {
+                "icon": "DiResponsive",
+                "title": "Responsive design",
+                "text": " Ensure that all web applications are responsive and compatible with various devices, browsers, and platforms."
+            },
+            {
+                "icon": "GiNetworkBars",
+                "title": "Optimization",
+                "text": "Optimize applications for maximum speed and scalability."
+            },
+            {
+                "icon": "RiTeamFill",
+                "title": "Team work",
+                "text": "Collaborate with product managers, designers, and back-end developers to create seamless and visually appealing user experiences."
+            },
+            {
+                "icon": "GoGoal",
+                "title": "Continuous learning",
+                "text": "Stay current on industry trends, best practices, and emerging technologies to ensure the team is using the most effective tools and techniques."
+            }
+        ]
+    }
 }
