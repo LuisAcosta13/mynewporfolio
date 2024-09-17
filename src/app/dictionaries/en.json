@@ -2,6 +2,10 @@
     "name": "Luis Acosta",
     "rol": "Frontend Developer",
     "about_title": "Who am I?",
+    "menu": {
+        "theme": "Change theme",
+        "language": "Change language"
+    },
     "about": "<p>I'm a Frontend Developer working from Argentina.</p> <p>I'm an experienced, responsible and resorceful person with great leadership and empathy skills, teamwork, problem solving, creativity and a great desire to learn and guide others.</p> <p>I studied as a Full Stack developer at Henry's bootcamp, perfecting my Front-End and Back-End bases, acquiring knowledge in React.js, Redux, Node.js, Express.js, PostgreSQL and Sequelize, and adding an excellent use of Javascript, with its libraries and frameworks.</p> <p>My latest experience as a Frontend Dev allowed me to participate in projects for american and french enterprises using my Javascript and SASS knowledge, integrating my work with backend and design team.</p>",
     "recommendations": [
         {
@@ -90,7 +94,7 @@
                 },
                 {
                     "company": "Canari Studio",
-                    "position": "Frontend developer",
+                    "position": "Frontend analyst",
                     "location": "Remote - Based in Argentina",
                     "date": "2023 - 2024"
                 },
@@ -106,23 +110,23 @@
             "title": "My skills & advantage",
             "tools": [
                 {
-                    "tool": "HTML & CSS",
+                    "name": "HTML & CSS / SCSS",
                     "level": 95
                 },
                 {
-                    "tool": "JavaScript",
+                    "name": "JavaScript",
                     "level": 90
                 },
                 {
-                    "tool": "React",
+                    "name": "React",
                     "level": 90
                 },
                 {
-                    "tool": "Next.js",
+                    "name": "Next.js",
                     "level": 80
                 },
                 {
-                    "tool": "TypeScript",
+                    "name": "TypeScript",
                     "level": 80
                 }
             ]

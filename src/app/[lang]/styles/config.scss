@@ -10,6 +10,7 @@ $base-color7: #a900e2;
 $base-color8: #000000;
 $base-color9: linear-gradient(154deg, rgb(143, 143, 143), rgb(88, 87, 87), rgb(143, 143, 143));
 $base-color10: rgba(105, 105, 105, 0.249);
+$base-color11: rgb(39, 39, 39);
 
 html {}
 
@@ -32,6 +33,10 @@ body {
 
             .menu-logo {
                 color: $base-color5
+            }
+
+            .languages{
+                background-color: $base-color11;
             }
         }
 
@@ -84,7 +89,7 @@ body {
             .skills_list .skill_card {
 
                 &:nth-child(even) {
-                    background: rgb(39, 39, 39);
+                    background: $base-color11;
                 }
             }
         }
@@ -117,8 +122,24 @@ body {
                         }
                     }
                 }
+
+                .tools{
+                    background-color: $base-color11;
+
+                    .tools-label {
+                        border-bottom: solid 1px $base-color5;
+                    }
+
+                    .progress-bar {
+                        background-color: $base-color5;
+                    }
+                }
             }
 
+        }
+
+        .info-bubble{
+            background-color: $base-color11;
         }
     }
 
@@ -138,5 +159,17 @@ body {
         &:hover {
             color: $base-color4;
         }
+    }
+
+    .info-bubble{
+        position: absolute;
+        top: 0px;
+        left: -130px;
+        display: none;
+        font-size: 15px;
+        background-color: $base-color1;
+        padding: 10px;
+        width: max-content;
+        border-radius: 8px;
     }
 }

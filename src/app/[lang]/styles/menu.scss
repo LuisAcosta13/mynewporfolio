@@ -38,11 +38,24 @@
         justify-content: space-between;
         align-items: center;
         gap: 50px;
+        height: 50px;
 
-        .dark-mode{
-            &:hover{
-                cursor: pointer;
+        .theme-button, .lang-button{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            min-height: 100%;
+
+            &:hover .info-bubble{
+                display: block;
             }
+
+            .dark-mode{
+                &:hover{
+                    cursor: pointer;
+                }
+            }      
         }
     }
 }

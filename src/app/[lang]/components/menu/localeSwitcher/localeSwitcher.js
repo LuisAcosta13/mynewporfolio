@@ -26,16 +26,12 @@ export default function LocaleSwitcher({lang}) {
   const [flag, setFlag] = useState(enFlag)
   const [isLangSelectorOpen, setIsLangSelectorOpen] = useState(false)
 
-  
-
   useEffect(() => {
-    setFlag(
-      flagsObj[lang]
-    ) 
+    setFlag(flagsObj[lang]) 
   },[lang])
 
   return (
-    <div className="flag-container">
+    <div className="flag-container" onMouseLeave={() => setIsLangSelectorOpen(false)}>
       <div onClick={() => setIsLangSelectorOpen(!isLangSelectorOpen)}>
         <Image 
         src={flag} 

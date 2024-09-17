@@ -2,6 +2,10 @@
     "name": "Luis Acosta",
     "rol": "Desarrollador Frontend",
     "about_title": "Quien soy?",
+    "menu": {
+        "theme": "Cambiar tema",
+        "language": "Cambiar idioma"
+    },
     "about": "Soy un desarrollador Frontend trabajando desde Argentina. Soy un persona experimentada, responsable y resolutiva con una gran habilidad de liderazgo, empatia, trabajo en equipo, resolucion de problemas, creatividad y aprendizaje. Me forme como desarrollador Full Stack en Soy Henry, perfeccionando mi conocimiento en frontend y backend, adquiriendo experiencia en React.js, Redux, Node.js, Express.js, PostgreSQL and Sequelize, sumado a un excelente uso de Javascript y sus frameworks. Mi reciente experiencia trabajando para Canari Studio me permitio participar y liderar en diferentes proyectos para empresas de USA y Europa, integrando mi trabajo con el equipo de backend y diseño.",
     "recommendations": [
         {
@@ -46,34 +50,86 @@
         }
     ],
     "skills": {
-        "subtitle": "My services",
-        "title": "What I do.",
+        "subtitle": "Mis servicios",
+        "title": "Lo que hago.",
         "list": [
             {
                 "icon": "FaCode",
-                "title": "Frontend development",
+                "title": "Desarrollo frontend",
                 "text": "Develop and maintain user-facing features for web applications using HTML, CSS, and JavaScript. Translate design mock-ups and wireframes into high-quality code."
             },
             {
                 "icon": "DiResponsive",
-                "title": "Responsive design",
+                "title": "Diseño responsivo",
                 "text": " Ensure that all web applications are responsive and compatible with various devices, browsers, and platforms."
             },
             {
                 "icon": "GiNetworkBars",
-                "title": "Optimization",
+                "title": "Optimizacion",
                 "text": "Optimize applications for maximum speed and scalability."
             },
             {
                 "icon": "RiTeamFill",
-                "title": "Team work",
+                "title": "Trabajo en equipo",
                 "text": "Collaborate with product managers, designers, and back-end developers to create seamless and visually appealing user experiences."
             },
             {
                 "icon": "GoGoal",
-                "title": "Continuous learning",
+                "title": "Aprendizaje continuo",
                 "text": "Stay current on industry trends, best practices, and emerging technologies to ensure the team is using the most effective tools and techniques."
             }
         ]
+    },
+    "experience": {
+        "title": "Lo que hice.",
+        "subtitle": "Mis habilidades y experiencias",
+        "work_experience": {
+            "title": "Experiencia laboral",
+            "jobs": [
+                {
+                    "company": "Autonomo",
+                    "position": "Desarrollador Frontend",
+                    "location": "Remote - Based in Argentina",
+                    "date": "2024 - present"
+                },
+                {
+                    "company": "Canari Studio",
+                    "position": "Analista Frontend",
+                    "location": "Remote - Based in Argentina",
+                    "date": "2023 - 2024"
+                },
+                {
+                    "company": "Soy Henry",
+                    "position": "Asistente de enseñanza Fullstack",
+                    "location": "Argentina",
+                    "date": "2022 - 2023"
+                }
+            ]
+        },
+        "skills": {
+            "title": "Mis habilidades y herramientas",
+            "tools": [
+                {
+                    "name": "HTML & CSS / SCSS",
+                    "level": 95
+                },
+                {
+                    "name": "JavaScript",
+                    "level": 90
+                },
+                {
+                    "name": "React",
+                    "level": 90
+                },
+                {
+                    "name": "Next.js",
+                    "level": 80
+                },
+                {
+                    "name": "TypeScript",
+                    "level": 80
+                }
+            ]
+        }
     }
 }

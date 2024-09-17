@@ -18,7 +18,7 @@ export default function Menu({ lang, dictionary }) {
         // Mostrar el menú si el mouse está en la parte superior
         menu.style.transform = 'translateY(0)';
       } else {
-        menu.style.transform = 'translateY(-100%)';
+        //menu.style.transform = 'translateY(-100%)';
       }
     }
 
@@ -52,8 +52,14 @@ export default function Menu({ lang, dictionary }) {
           <span className="menu-logo">{dictionary.name}</span>
         </section>
         <section className="buttons">
-          <DarkModeBttn />
-          <LocaleSwicher lang={lang} />
+          <div className="theme-button">
+            <DarkModeBttn />
+            <span className="info-bubble">{dictionary.menu.theme}</span>
+          </div>
+          <div className="lang-button">
+            <LocaleSwicher lang={lang} />
+            <span className="info-bubble">{dictionary.menu.language}</span>
+          </div>
         </section>
       </div>
     </div>
