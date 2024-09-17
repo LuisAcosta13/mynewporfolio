@@ -6,6 +6,7 @@ import Reviews from "./components/home/Reviews.js"
 import { ThemeProvider } from './ThemeContext';
 import "./styles/page.scss"
 import Skills from "./components/home/Skills.js";
+import Experience from "./components/home/Experience.js";
 
 export default async function IndexPage({ params: { lang } }) {
   const dictionary = await getDictionary(lang);
@@ -18,6 +19,7 @@ export default async function IndexPage({ params: { lang } }) {
           <Title dictionary={dictionary} />
           <About dictionary={dictionary} />
           <Skills skills={dictionary.skills} />
+          <Experience experience={dictionary.experience}/>
           <Reviews recommendations={dictionary.recommendations} />
         </div>
       </div>

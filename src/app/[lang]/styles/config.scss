@@ -1,106 +1,142 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
-$base-color1:#e8e8e8;
-$base-color2: linear-gradient(90deg, rgba(0,63,135,1) 6%, rgba(135,186,226,1) 52%, rgba(230,230,230,1) 100%);
-$base-color3: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(3,0,69,1) 50%, rgba(0,5,184,1) 100%);
-$base-color4:#002488;
-$base-color5:#4d3bd0;
+$base-color1: #e8e8e8;
+$base-color2: linear-gradient(90deg, rgba(0, 63, 135, 1) 6%, rgba(135, 186, 226, 1) 52%, rgba(230, 230, 230, 1) 100%);
+$base-color3: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(3, 0, 69, 1) 50%, rgba(0, 5, 184, 1) 100%);
+$base-color4: #002488;
+$base-color5: #4d3bd0;
 $base-color6: #1b0c20;
 $base-color7: #a900e2;
 $base-color8: #000000;
-$base-color9:linear-gradient(154deg, rgb(143, 143, 143), rgb(88, 87, 87), rgb(143, 143, 143));
+$base-color9: linear-gradient(154deg, rgb(143, 143, 143), rgb(88, 87, 87), rgb(143, 143, 143));
+$base-color10: rgba(105, 105, 105, 0.249);
 
-body{
+html {}
+
+body {
     margin: 0;
+    padding-bottom: 50px;
     background: $base-color2;
     color: $base-color8;
     font-family: "Ubuntu", sans-serif;
     font-weight: 400;
     font-style: normal;
 
-    &.dark{
+    &.dark {
         background: $base-color3;
         color: $base-color1;
 
-        .menu{
+        .menu {
             background-color: $base-color3;
             color: $base-color1;
 
-            .menu-logo{
+            .menu-logo {
                 color: $base-color5
             }
         }
 
-        .main-content{
-            .title-content{
-                .title-text{
-                    .title-name{
+        .main-content {
+            .title-content {
+                .title-text {
+                    .title-name {
                         color: $base-color5;
                     }
 
-                    .title-rol{
+                    .title-rol {
                         color: $base-color1;
                     }
                 }
             }
-            .about-content{
-                .about-title{
+
+            .about-content {
+                .about-title {
                     color: $base-color5;
                 }
 
-                .image-container{
-                    &:before{
+                .image-container {
+                    &:before {
                         background-color: $base-color5;
                     }
                 }
             }
 
-            .slider-container{
-                .card{
+            .slider-container {
+                .card {
                     background: $base-color9;
                 }
             }
         }
 
-        .skills{
+        .skills {
 
-            .skills_title{
-                .subtitle{
+            .skills_title {
+                .subtitle {
                     color: $base-color5;
                 }
 
-                .title{
-                    &::after{
+                .title {
+                    &::after {
                         background-color: $base-color5;
                     }
                 }
             }
 
-            .skills_list .skill_card{
+            .skills_list .skill_card {
 
                 &:nth-child(even) {
                     background: rgb(39, 39, 39);
                 }
             }
-        } 
-        
+        }
+
+        .experience {
+
+            .experience_title {
+                .subtitle {
+                    color: $base-color5;
+                }
+
+                .title {
+                    &::after {
+                        background-color: $base-color5;
+                    }
+                }
+            }
+
+            .experience-content {
+                .jobs-section {
+                    .jobs-label{
+                        border-bottom: solid 1px $base-color5;
+                    }
+
+                    .jobs-list {
+                        .job-card {
+                            .text-three{
+                                color: $base-color5;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
     }
-}
 
-ul{
-    margin: 0;
-    padding: 0;
-}
+    ul {
+        margin: 0;
+        padding: 0;
+    }
 
-li{
-    list-style: none;
-}
+    li {
+        list-style: none;
+    }
 
-a{
-    color: $base-color7;
-    text-decoration: none;
+    a {
+        color: $base-color7;
+        text-decoration: none;
 
-    &:hover{
-        color: $base-color4;
+        &:hover {
+            color: $base-color4;
+        }
     }
 }

@@ -75,5 +75,57 @@
                 "text": "Stay current on industry trends, best practices, and emerging technologies to ensure the team is using the most effective tools and techniques."
             }
         ]
+    },
+    "experience": {
+        "title": "What I did.",
+        "subtitle": "My skills and work experiences",
+        "work_experience": {
+            "title": "Work experiences",
+            "jobs": [
+                {
+                    "company": "Freelancer",
+                    "position": "Frontend developer",
+                    "location": "Remote - Based in Argentina",
+                    "date": "2024 - present"
+                },
+                {
+                    "company": "Canari Studio",
+                    "position": "Frontend developer",
+                    "location": "Remote - Based in Argentina",
+                    "date": "2023 - 2024"
+                },
+                {
+                    "company": "Soy Henry",
+                    "position": "Fullstack Teaching Assistant",
+                    "location": "Argentina",
+                    "date": "2022 - 2023"
+                }
+            ]
+        },
+        "skills": {
+            "title": "My skills & advantage",
+            "tools": [
+                {
+                    "tool": "HTML & CSS",
+                    "level": 95
+                },
+                {
+                    "tool": "JavaScript",
+                    "level": 90
+                },
+                {
+                    "tool": "React",
+                    "level": 90
+                },
+                {
+                    "tool": "Next.js",
+                    "level": 80
+                },
+                {
+                    "tool": "TypeScript",
+                    "level": 80
+                }
+            ]
+        }
     }
 }

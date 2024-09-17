@@ -35,7 +35,7 @@ function Reviews({ recommendations }) {
 
   return (
     <div className="slider-container">
-      <div class="blur-left"></div>
+      <div className="blur-left"></div>
       <Slider {...settings}>
         {Object.values(recommendations).map((obj, index) =>
           <div className="card" key={index}>
@@ -49,7 +49,7 @@ function Reviews({ recommendations }) {
           </div>
         )}
       </Slider>
-      <div class="blur-right"></div>
+      <div className="blur-right"></div>
     </div>
   );
 }

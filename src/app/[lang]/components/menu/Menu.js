@@ -3,13 +3,14 @@
 import LocaleSwicher from "./localeSwitcher/localeSwitcher";
 import "../../styles/menu.scss"
 import DarkModeBttn from "./darkModeBttn/DarkModeBttn";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 export default function Menu({ lang, dictionary }) {
+  const menuRef = useRef(null);
 
   useEffect(() => {
     let lastScrollTop = 0;
-    const menu = document.getElementById('menu');
+    const menu = menuRef.current;
     const showThreshold = 80;
 
     function handleMouseMove(e) {
@@ -21,28 +22,31 @@ export default function Menu({ lang, dictionary }) {
       }
     }
 
-    window.addEventListener('scroll', () => {
+    function handleScroll() {
       const scrollTop = window.scrollY || document.documentElement.scrollTop;
-      
+
       if (scrollTop === 0) {
-        // Si estamos en la parte superior de la página, asegurarse de que el menú esté visible
         menu.style.transform = 'translateY(0)';
         window.removeEventListener('mousemove', handleMouseMove);
       } else if (scrollTop > lastScrollTop) {
-        // Scroll hacia abajo - ocultar header
         menu.style.transform = 'translateY(-100%)';
         window.addEventListener('mousemove', handleMouseMove);
       } else {
-        // Scroll hacia arriba - mostrar header
         menu.style.transform = 'translateY(0)';
       }
-
       lastScrollTop = scrollTop;
-    });
+    }
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
   }, [])
 
   return (
-    <div id="menu" className="menu">
+    <div id="menu" ref={menuRef} className="menu">
       <div className="padding">
         <section>
           <span className="menu-logo">{dictionary.name}</span>
@@ -51,9 +55,7 @@ export default function Menu({ lang, dictionary }) {
           <DarkModeBttn />
           <LocaleSwicher lang={lang} />
         </section>
-
       </div>
-
     </div>
   );
 }
