@@ -9,7 +9,7 @@ export default function DarkModeBttn() {
 
     return (
         <div className="dark-mode" onClick={toggleTheme} >
-            {theme === "dark" ? <IoMdSunny /> : <IoMdMoon />}
+            {theme === "dark" ? <IoMdSunny size={30}/> : <IoMdMoon size={30}/>}
         </div>
     );
 }

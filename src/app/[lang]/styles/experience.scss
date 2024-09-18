@@ -134,3 +134,31 @@
         }
     }
 }
+
+@media (max-width: 600px) {
+    .experience {
+        .experience-content{
+            gap: 50px;
+
+            .jobs-section{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                .jobs-label{
+                    text-align: center;
+                }
+            }
+
+            .tools{
+                padding-left: 20px;
+                padding-right: 20px;
+
+                .tools-label{
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

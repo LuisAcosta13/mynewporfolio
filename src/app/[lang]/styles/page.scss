@@ -82,7 +82,7 @@
 
 @media (max-width: 1300px) {
     .main-content {
-        margin: 0 20px;
+        margin: 0;
 
         .title-content {
             .title-text {
@@ -90,6 +90,7 @@
                 text-align: center;
                 gap: 10px;
                 flex-wrap: wrap;
+                margin-left: 50px;
 
                 .title-name {
                     font-size: 40px;
@@ -122,6 +123,31 @@
                     height: 250px;
                 }
             }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .main-content{
+        margin: 0;
+
+        .title-content{
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .title-text{
+                margin: 0;
+                text-align: center;
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        .about-content{
+            padding-top: 80px;
         }
     }
 }

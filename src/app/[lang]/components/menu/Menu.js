@@ -4,9 +4,14 @@ import LocaleSwicher from "./localeSwitcher/localeSwitcher";
 import "../../styles/menu.scss"
 import DarkModeBttn from "./darkModeBttn/DarkModeBttn";
 import { useEffect, useRef } from "react";
+import { useTheme } from "../../ThemeContext";
+import Image from "next/image";
+import blackLogo from "/public/images/logo-dark.png"
+import whiteLogo from "/public/images/logo-white.png"
 
 export default function Menu({ lang, dictionary }) {
   const menuRef = useRef(null);
+  const { theme } = useTheme();
 
   useEffect(() => {
     let lastScrollTop = 0;
@@ -48,8 +53,8 @@ export default function Menu({ lang, dictionary }) {
   return (
     <div id="menu" ref={menuRef} className="menu">
       <div className="padding">
-        <section>
-          <span className="menu-logo">{dictionary.name}</span>
+        <section className="logo">
+          <Image src={theme === "dark" ? whiteLogo : blackLogo}/>
         </section>
         <section className="buttons">
           <div className="theme-button">

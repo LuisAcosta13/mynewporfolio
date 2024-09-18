@@ -5,7 +5,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 110px 150px 50px;
+    margin: 110px 0px 50px;
 
     .skills_title {
         display: flex;
@@ -45,6 +45,7 @@
         justify-content: space-around;
         align-items: flex-start;
         gap: 15px;
+        flex-wrap: wrap;
 
         .skill_card {
             display: flex;
@@ -91,14 +92,6 @@
 
         .skill_card:hover .card_text {
             max-height: 500px;
-        }
-    }
-}
-
-@media (max-width: 1500px) {
-    .skills{
-        .skills_list{
-            flex-wrap: wrap;
         }
     }
 }

@@ -5,8 +5,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { i18n} from "../../../../../../i18n-config";
 import { useEffect, useState } from "react";
-import enFlag from "../../../../../../public/images/en.png"
-import esFlag from "../../../../../../public/images/es.png"
+import enFlag from "../../../../../../public/images/en.svg"
+import esFlag from "../../../../../../public/images/es.svg"
 import "../../../styles/localeSwitcher.scss"
 
 const flagsObj = {
