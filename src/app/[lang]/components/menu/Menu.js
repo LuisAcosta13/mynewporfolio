@@ -54,7 +54,7 @@ export default function Menu({ lang, dictionary }) {
     <div id="menu" ref={menuRef} className="menu">
       <div className="padding">
         <section className="logo">
-          <Image src={theme === "dark" ? whiteLogo : blackLogo}/>
+          {/* <Image src={theme === "dark" ? whiteLogo : blackLogo}/> */}
         </section>
         <section className="buttons">
           <div className="theme-button">

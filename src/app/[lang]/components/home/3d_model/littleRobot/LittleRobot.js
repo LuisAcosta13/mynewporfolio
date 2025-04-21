@@ -1,0 +1,110 @@
+
+import { useGLTF, useAnimations } from '@react-three/drei'
+import React, { useEffect } from 'react'
+import * as THREE from 'three';
+
+export function LittleRobot(props) {
+  const group = React.useRef()
+  const { nodes, materials, animations } = useGLTF('/littleRobot.gltf')
+  const { actions } = useAnimations(animations, group)
+
+   useEffect(() => {
+      if (actions) {
+        actions[Object.keys(actions)[0]].play()
+      }
+      
+      // Clean up on unmount
+      //return () => actions && Object.values(actions).forEach(action => action.stop())
+    }, [actions])
+
+    useEffect(() => {
+      if (actions) {
+        actions[Object.keys(actions)[0]].play();
+      }
+  
+      // Cambiar el material de los ojos para hacerlos brillantes (emissive)
+      if (nodes.Eyes_Blue_Light_0) {
+        const eyesMaterial = nodes.Eyes_Blue_Light_0.material;
+  
+        if (eyesMaterial) {
+          // Hacer los ojos brillantes con un color azul intenso
+          eyesMaterial.emissive = new THREE.Color(0, 0.8, 1); // Color azul brillante
+          eyesMaterial.emissiveIntensity = 5; // Aumentar la intensidad del brillo
+          eyesMaterial.color = new THREE.Color(0, 0.3, 0.8); // Color base para los ojos
+          eyesMaterial.roughness = 0.1; // Superficie más suave para reflejos
+          eyesMaterial.metalness = 0.7; // Añadir metalicidad para mayor brillo
+        }
+      }
+  
+      // Cambiar otros materiales que quieras que se vean más brillantes
+      // Por ejemplo, cambiar el material del robot:
+      if (nodes.Robot_Blue_Light_0) {
+        const robotMaterial = nodes.Robot_Blue_Light_0.material;
+        if (robotMaterial) {
+          robotMaterial.emissive = new THREE.Color(0x00ffff); // Azul cian brillante
+          robotMaterial.emissiveIntensity = 10; // ¡Mucho más brillante!
+          robotMaterial.color = new THREE.Color(0x0088ff); // Color base más saturado
+          robotMaterial.roughness = 0.1; // Más suave aún
+          robotMaterial.metalness = 1; // Totalmente metálico
+          robotMaterial.toneMapped = false; // ¡Importante! Permite que se vea el brillo extremo
+        }
+      }
+    }, [actions, nodes]);
+
+  return (
+    <group ref={group} {...props} dispose={null}>
+      <group name="Sketchfab_Scene">
+        <group name="Sketchfab_model" rotation={[-Math.PI / 2, 0, 0.4]} scale={0.246}>
+          <group name="a45b6f53b9cc462a82863bb5898bf730fbx" rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
+            <group name="Object_2">
+              <group name="RootNode">
+                <group name="Robot_Origin" position={[0, 9.763, 0]} rotation={[-Math.PI / 2, 0, 0]} scale={100}>
+                  <group name="Mouth" position={[0, -0.504, 2.573]} scale={[1, 1, 2.881]}>
+                    <mesh name="Mouth_Blue_Light_0" geometry={nodes.Mouth_Blue_Light_0.geometry} material={materials.Blue_Light} />
+                  </group>
+                  <group name="Wave" position={[0, 0, 0.113]} scale={[1, 1, 0.186]}>
+                    <mesh name="Wave_Blue_Light_0" geometry={nodes.Wave_Blue_Light_0.geometry} material={materials.Blue_Light} />
+                  </group>
+                  <group name="Wave002" position={[0, 0, 0.879]} scale={[1, 1, 0.889]}>
+                    <mesh name="Wave002_Blue_Light_0" geometry={nodes.Wave002_Blue_Light_0.geometry} material={materials.Blue_Light} />
+                  </group>
+                  <group name="Wave001" position={[0, 0, -0.089]} scale={[1, 1, 0.001]}>
+                    <mesh name="Wave001_Blue_Light_0" geometry={nodes.Wave001_Blue_Light_0.geometry} material={materials.Blue_Light} />
+                  </group>
+                  <group name="Wave003" position={[0, 0, 0.511]} scale={[1, 1, 0.552]}>
+                    <mesh name="Wave003_Blue_Light_0" geometry={nodes.Wave003_Blue_Light_0.geometry} material={materials.Blue_Light} />
+                  </group>
+                  <group name="Ears" position={[0, 0, 2.967]}>
+                    <mesh name="Ears_Black_Matt_0" geometry={nodes.Ears_Black_Matt_0.geometry} material={materials.Black_Matt} />
+                  </group>
+                  <group name="Empty" position={[0, -0.06, 2.786]}>
+                    <group name="Eyes" position={[0, -0.431, 0.076]}>
+                      <mesh name="Eyes_Blue_Light_0" geometry={nodes.Eyes_Blue_Light_0.geometry} material={materials.Blue_Light} />
+                    </group>
+                  </group>
+                  <group name="Hand_origin" position={[0.723, 0, 2.015]} rotation={[0, -0.064, 0]}>
+                    <group name="hANDS" position={[-0.723, 0, -1.963]}>
+                      <mesh name="hANDS_White_Glossy_0" geometry={nodes.hANDS_White_Glossy_0.geometry} material={materials.White_Glossy} />
+                    </group>
+                  </group>
+                  <group name="Hand_origin002" position={[-0.723, 0, 2.015]} rotation={[0, 0.064, -Math.PI]}>
+                    <group name="hANDS002" position={[-0.723, 0, -1.963]}>
+                      <mesh name="hANDS002_White_Glossy_0" geometry={nodes.hANDS002_White_Glossy_0.geometry} material={materials.White_Glossy} />
+                    </group>
+                  </group>
+                  <group name="Robot" position={[0, 0, 0.051]}>
+                    <mesh name="Robot_White_Glossy_0" geometry={nodes.Robot_White_Glossy_0.geometry} material={materials.White_Glossy} />
+                    <mesh name="Robot_Blue_Light_0" geometry={nodes.Robot_Blue_Light_0.geometry} material={materials.Blue_Light} />
+                    <mesh name="Robot_Black_Matt_0" geometry={nodes.Robot_Black_Matt_0.geometry} material={materials.Black_Matt} />
+                  </group>
+                </group>
+              </group>
+            </group>
+          </group>
+        </group>
+      </group>
+    </group>
+  )
+}
+
+useGLTF.preload('/littleRobot.gltf')
