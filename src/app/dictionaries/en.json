@@ -1,7 +1,12 @@
 {
-    "name": "Luis Acosta",
+    "greetings": "Hello and welcome to Luis Acosta's Website! How can I help?",
     "rol": "Frontend Software Engineer",
     "about_title": "Who am I?",
+    "responses": {
+        "profile": "Luis is a Frontend Software Engineer from Argentina. Experienced, responsible and resorceful, he has a great desire to learn and guide others.",
+        "greeting_2": "I'm here to help you with any questions or information you need.",
+        "greeting_3": "Feel free to ask me anything about my work, skills, or experiences."
+    },
     "menu": {
         "theme": "Change theme",
         "language": "Change language"
