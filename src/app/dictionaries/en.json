@@ -1,23 +1,41 @@
 {
-    "greetings": "Welcome to Luis Acosta's Website! How can I assist you today?",
+    "greetings": "Hello human! Welcome to the digital home of Luis Acosta! I’m L.A.M.B.I. (Luis Acosta’s Modular Bot Interface), your friendly assistant—ready to guide you through his world of code, creativity, and collaboration. How can I help you today?",
     "rol": "Frontend Software Engineer",
     "about_title": "Who am I?",
     "responses": [
         {
             "question": "Who is Luis Acosta?",
-            "answer": "Luis is a Frontend Software Engineer from Argentina. Experienced, responsible and resorceful, he has a great desire to learn and guide others."
+            "answer": "Beep boop! 🤖 Allow me to introduce Luis Acosta. He’s a Frontend Software Engineer from Argentina with a strong drive to learn, build, and help others grow. Responsible? ✅ Resourceful? ✅ Always curious? Double ✅. Whether he’s coding or mentoring, Luis brings experience and heart to every project he touches."
         },
         {
             "question": "What does he do?",
-            "answer": "He loves making the code editor his playground, working with Project Managers, Designers and Backend Engineers, but he also has experience coordinating teams from 3 to 6 people"
+            "answer": "He enjoys turning lines of code into useful, beautiful things—like magic, but with JavaScript! He works hand in hand with Project Managers, Designers, and Backend Engineers to build seamless digital experiences. Oh! And he’s also led development teams of 3 to 6 humans, keeping things on track with a smile (or at least a well-organized Trello board)."
         },
         {
             "question": "What's his background?",
-            "answer": "He spent the last few years working for french companies such as Canari Studio and Le Comptoir Digital as a developer. His main clients includes Mc Donald's, Mitel and Data.ai."
+            "answer": "Accessing memory banks... 🧠💾 Luis has spent the past few years coding away for French companies like Canari Studio and Le Comptoir Digital. He’s contributed to projects for big names such as McDonald’s, Mitel, and Data.ai—yep, he’s been busy building cool stuff for some pretty cool clients!"
         },
         {
             "question": "What do people say about him?",
-            "answer": "Some people would like you to know what they think about him. I'll let you read more at the bottom of this site."
+            "answer": "Processing testimonials... 💬✨ Some humans have shared their thoughts about working with Luis—and they're quite nice! But don’t take my word for it… scroll down to see what they had to say!"
+        },
+        {
+            "question": "What are his hobbies?",
+            "answer": "Beep beep! 🤖 Luis loves reading (he’s a Game of Thrones fan!), playing video games, watching movies, and spending time with his family. He also enjoys traveling and exploring new places. 🌍✨"
+        },
+        {
+            "question": "What are his goals?",
+            "answer": "Luis aims to continue growing as a developer and mentor, helping others while also expanding his own skills. He dreams of working on exciting projects that make a real difference in people’s lives! 🚀"
+        },
+        {
+            "question": "Where can I find him on LinkedIn?",
+            "answer": "You can connect with Luis on LinkedIn! 🚀 Let me show you the way to his profile and let’s get networking! 🤝",
+            "link": "https://www.linkedin.com/in/react-front"
+        },
+        {
+            "question": "Can I download his CV?",
+            "answer": "Of course! 📄 You can download Luis's CV right here. Just a second...",
+            "link": "/Resume_Luis_Acosta(EN-2025).pdf"
         }
     ],
     "menu": {

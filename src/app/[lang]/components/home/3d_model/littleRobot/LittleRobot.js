@@ -7,6 +7,36 @@ export function LittleRobot(props) {
   const group = React.useRef()
   const { nodes, materials, animations } = useGLTF('/littleRobot.gltf')
   const { actions } = useAnimations(animations, group)
+  const [colorIndex, setColorIndex] = React.useState(0)
+
+const colors = [
+  new THREE.Color(0xff0000),
+  new THREE.Color(0xff8800),
+  new THREE.Color(0x00ff88),
+  new THREE.Color(0xff0088),
+  new THREE.Color(0xffff00),
+]
+
+const handleColorChange = () => {
+  const nextIndex = (colorIndex + 1) % colors.length
+  setColorIndex(nextIndex)
+
+  const newColor = colors[nextIndex]
+
+  // Aplicar el nuevo color al material del robot
+  const robotMaterial = nodes.Robot_Blue_Light_0?.material
+  if (robotMaterial) {
+    robotMaterial.color = newColor
+    robotMaterial.emissive = newColor
+  }
+
+  // También podés cambiar los ojos si querés
+  const eyesMaterial = nodes.Eyes_Blue_Light_0?.material
+  if (eyesMaterial) {
+    eyesMaterial.color = newColor
+    eyesMaterial.emissive = newColor
+  }
+}
 
    useEffect(() => {
       if (actions) {
@@ -22,37 +52,23 @@ export function LittleRobot(props) {
         actions[Object.keys(actions)[0]].play();
       }
   
-      // Cambiar el material de los ojos para hacerlos brillantes (emissive)
-      if (nodes.Eyes_Blue_Light_0) {
-        const eyesMaterial = nodes.Eyes_Blue_Light_0.material;
-  
-        if (eyesMaterial) {
-          // Hacer los ojos brillantes con un color azul intenso
-          eyesMaterial.emissive = new THREE.Color(0, 0.8, 1); // Color azul brillante
-          eyesMaterial.emissiveIntensity = 5; // Aumentar la intensidad del brillo
-          eyesMaterial.color = new THREE.Color(0, 0.3, 0.8); // Color base para los ojos
-          eyesMaterial.roughness = 0.1; // Superficie más suave para reflejos
-          eyesMaterial.metalness = 0.7; // Añadir metalicidad para mayor brillo
-        }
-      }
-  
       // Cambiar otros materiales que quieras que se vean más brillantes
       // Por ejemplo, cambiar el material del robot:
       if (nodes.Robot_Blue_Light_0) {
-        const robotMaterial = nodes.Robot_Blue_Light_0.material;
-        if (robotMaterial) {
-          robotMaterial.emissive = new THREE.Color(0x00ffff); // Azul cian brillante
-          robotMaterial.emissiveIntensity = 10; // ¡Mucho más brillante!
-          robotMaterial.color = new THREE.Color(0x0088ff); // Color base más saturado
-          robotMaterial.roughness = 0.1; // Más suave aún
-          robotMaterial.metalness = 1; // Totalmente metálico
-          robotMaterial.toneMapped = false; // ¡Importante! Permite que se vea el brillo extremo
+        const eyesMaterial = nodes.Robot_Blue_Light_0.material;
+        if (eyesMaterial) {
+          eyesMaterial.emissive = new THREE.Color(0x00ffff); // Azul cian brillante
+          eyesMaterial.emissiveIntensity = 1; // ¡Mucho más brillante!
+          eyesMaterial.color = new THREE.Color(0x0088ff); // Color base más saturado
+          eyesMaterial.roughness = 0.1; // Más suave aún
+          eyesMaterial.metalness = 1; // Totalmente metálico
+          eyesMaterial.toneMapped = false; // ¡Importante! Permite que se vea el brillo extremo
         }
       }
     }, [actions, nodes]);
 
   return (
-    <group ref={group} {...props} dispose={null}>
+    <group ref={group} {...props} dispose={null} onClick={handleColorChange}>
       <group name="Sketchfab_Scene">
         <group name="Sketchfab_model" rotation={[-Math.PI / 2, 0, 0.4]} scale={0.246}>
           <group name="a45b6f53b9cc462a82863bb5898bf730fbx" rotation={[Math.PI / 2, 0, 0]} scale={0.01}>

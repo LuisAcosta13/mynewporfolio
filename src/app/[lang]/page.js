@@ -17,7 +17,7 @@ export default async function IndexPage({ params: { lang } }) {
         <div className="main-content">
 
           <Title dictionary={dictionary} />
-          <About dictionary={dictionary} />
+          {/* <About dictionary={dictionary} /> */}
           <Skills skills={dictionary.skills} />
           <Experience experience={dictionary.experience}/>
           <Reviews recommendations={dictionary.recommendations} />

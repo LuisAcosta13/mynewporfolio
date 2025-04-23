@@ -1,52 +1,88 @@
 {
-    "name": "Luis Acosta",
+    "greetings": "¡Hola humano! ¡Bienvenido al hogar digital de Luis Acosta! Soy L.A.M.B.I. (Luis Acosta’s Modular Bot Interface), tu asistente amigable, listo para guiarte a través de su mundo de código, creatividad y colaboración. ¿Cómo puedo ayudarte hoy?",
     "rol": "Ingeniero de Software Frontend",
-    "about_title": "Quien soy?",
+    "about_title": "¿Quién soy?",
+    "responses": [
+        {
+            "question": "¿Quién es Luis Acosta?",
+            "answer": "¡Beep boop! 🤖 Permíteme presentarte a Luis Acosta. Es un Ingeniero de Software Frontend de Argentina con una gran motivación para aprender, construir y ayudar a otros a crecer. ¿Responsable? ✅ ¿Ingenioso? ✅ ¿Siempre curioso? Doble ✅. Ya sea programando o mentorando, Luis aporta experiencia y corazón a cada proyecto que toca."
+        },
+        {
+            "question": "¿Qué hace?",
+            "answer": "Disfruta convertir líneas de código en cosas útiles y hermosas, ¡como magia, pero con JavaScript! Trabaja codo a codo con Gerentes de Proyecto, Diseñadores e Ingenieros Backend para crear experiencias digitales sin interrupciones. ¡Ah! Y también ha liderado equipos de desarrollo de 3 a 6 personas, manteniendo todo en orden con una sonrisa (o al menos con un Trello bien organizado)."
+        },
+        {
+            "question": "¿Cuál es su experiencia?",
+            "answer": "Accediendo a los bancos de memoria... 🧠💾 Luis ha pasado los últimos años programando para empresas francesas como Canari Studio y Le Comptoir Digital. Ha contribuido en proyectos para grandes nombres como McDonald’s, Mitel y Data.ai. ¡Sí, ha estado muy ocupado creando cosas geniales para algunos clientes muy cool!"
+        },
+        {
+            "question": "¿Qué dicen las personas sobre él?",
+            "answer": "Procesando testimonios... 💬✨ Algunos humanos han compartido sus pensamientos sobre trabajar con Luis, ¡y son bastante buenos! Pero no te quedes con mi palabra... desplázate hacia abajo para ver qué dijeron."
+        },
+        {
+            "question": "¿Cuáles son sus pasatiempos?",
+            "answer": "¡Bip bip! 🤖 Luis disfruta mucho de la lectura (¡es fanático de Game of Thrones!), jugar videojuegos, ver películas y pasar tiempo con su familia. Además, le encanta viajar y descubrir nuevos lugares. 🌍✨"
+        },
+        {
+            "question": "¿Cuáles son sus metas?",
+            "answer": "Luis tiene como objetivo seguir creciendo como desarrollador y mentor, ayudando a otros mientras sigue expandiendo sus propias habilidades. ¡Sueña con trabajar en proyectos emocionantes que realmente marquen la diferencia en la vida de las personas! 🚀"
+        },
+        {
+            "question": "¿Dónde puedo encontrarlo en LinkedIn?",
+            "answer": "¡Puedes conectar con Luis en LinkedIn! 🚀 ¡Déjame mostrarte el camino a su perfil y vamos a hacer networking! 🤝",
+            "link": "https://www.linkedin.com/in/react-front"
+        },
+        {
+            "question": "¿Puedo descargar su CV?",
+            "answer": "¡Por supuesto! 📄 Puedes descargar el CV de Luis justo aquí. Un momento...",
+            "link": "/CV_Luis_Acosta(ES-2025).pdf"
+        }
+    ],
     "menu": {
-        "theme": "Cambiar tema",
-        "language": "Cambiar idioma"
+        "theme": "Change theme",
+        "language": "Change language"
     },
     "about": "Soy un Ingeniero de Software Frontend trabajando desde Argentina. Soy un persona experimentada, responsable y resolutiva con una gran habilidad de liderazgo, empatia, trabajo en equipo, resolucion de problemas, creatividad y aprendizaje. Me forme como desarrollador Full Stack en Soy Henry, perfeccionando mi conocimiento en frontend y backend, adquiriendo experiencia en React.js, Redux, Node.js, Express.js, PostgreSQL and Sequelize, sumado a un excelente uso de Javascript y sus frameworks. Mi reciente experiencia trabajando para Canari Studio me permitio participar y liderar en diferentes proyectos para empresas de USA y Europa, integrando mi trabajo con el equipo de backend y diseño.",
     "recommendations": [
         {
             "name": "Gabriele Capocelli",
-            "rol": "Canari Studio - PHP Backend Developer",
-            "text": "Luis is a reliable professional, extremely meticulous in his work, always active and participatory in the team in which I was lucky enough to manage him, collaborative with colleagues and absolutely always in time with deadlines. In addition to these characteristics, he is a smart and nice person. I highly recommend it for integrating existing teams but also as a freelancer."
+            "rol": "Canari Studio - Desarrollador Backend PHP",
+            "text": "Luis es un profesional confiable, extremadamente meticuloso en su trabajo, siempre activo y participativo en el equipo en el que tuve la suerte de gestionarlo, colaborador con sus compañeros y absolutamente siempre cumpliendo con los plazos. Además de estas características, es una persona inteligente y agradable. Lo recomiendo ampliamente para integrar equipos existentes, pero también como freelancer."
         },
         {
             "name": "Daniel Henderson",
-            "rol": "data.ai - Digital Marketing Director",
-            "text": "Luis was a wonderful partner in our website management at data.ai. He had a very ambitious personality and a great sense of urgency to projects with quick deadlines. I could always rely on Luis to be responsive and quick to take action. When given proper details, Luis could run with website tickets on his own without extensive guidance. It was a pleasure working with Luis and I highly recommend him not just for the skills he has but for his attitude and dedication he gives to his work."
-        }, 
+            "rol": "data.ai - Director de Marketing Digital",
+            "text": "Luis fue un maravilloso compañero en la gestión de nuestro sitio web en data.ai. Tenía una personalidad muy ambiciosa y un gran sentido de urgencia con proyectos de plazos cortos. Siempre podía contar con Luis para que fuera receptivo y rápido para tomar acción. Cuando se le proporcionaban los detalles adecuados, Luis podía encargarse de las tareas del sitio web por su cuenta sin necesidad de mucha orientación. Fue un placer trabajar con Luis y lo recomiendo altamente no solo por las habilidades que tiene, sino por su actitud y dedicación que le da a su trabajo."
+        },
         {
             "name": "Rosibel Mendoza",
-            "rol": "FullStack Developer - SoyHenry Bootcamp",
-            "text": "Respectful, responsible, perfectionist and very professional, he's always looking foward to give his best and encourages his environment to follow the leed. His skills allow him to lead a team but he also works fine following comand. He always seeks to learn new things and shares his knowledge with his peers. Definetly he's a must have in any team."
+            "rol": "Desarrolladora FullStack - SoyHenry Bootcamp",
+            "text": "Respetuoso, responsable, perfeccionista y muy profesional, siempre busca dar lo mejor de sí y fomenta a su entorno para seguir su ejemplo. Sus habilidades le permiten liderar un equipo, pero también trabaja bien siguiendo instrucciones. Siempre busca aprender cosas nuevas y comparte sus conocimientos con sus compañeros. Definitivamente, es una persona indispensable en cualquier equipo."
         },
         {
             "name": "Alejandro Morales",
-            "rol": "FullStack Developer - SoyHenry Bootcamp",
-            "text": "He is a highly skilled and dedicated individual who maintains a high standard of work and is always willing to contribute to solving problems for his colleagues. Personally, I value his enthusiasm and creativity in the work he does."
+            "rol": "Desarrollador FullStack - SoyHenry Bootcamp",
+            "text": "Es una persona altamente capacitada y dedicada que mantiene un alto estándar de trabajo y siempre está dispuesta a contribuir a la solución de problemas para sus compañeros. Personalmente, valoro su entusiasmo y creatividad en el trabajo que realiza."
         },
         {
             "name": "Bernardo Broscheit",
-            "rol": "FullStack Developer - SoyHenry Bootcamp",
-            "text": "I worked with Luis throughout the Henry Bootcamp, and during the course, he consistently demonstrated that he is a supportive, fun, creative, and eager learner. His curiosity, proactivity, and adaptability were also key in tackling the challenges of the final project. I have no doubt that he can excel in a professional environment and bring many additional skills to the table."
+            "rol": "Desarrollador FullStack - SoyHenry Bootcamp",
+            "text": "Trabajé con Luis durante todo el Bootcamp de Henry, y durante el curso, demostró constantemente que es una persona de apoyo, divertida, creativa y con muchas ganas de aprender. Su curiosidad, proactividad y adaptabilidad también fueron claves para enfrentar los desafíos del proyecto final. No tengo dudas de que puede sobresalir en un entorno profesional y aportar muchas habilidades adicionales."
         },
         {
             "name": "Bárbara Miranda",
-            "rol": "FullStack Developer Student - SoyHenry Bootcamp",
-            "text": "I had the pleasure of going through my SoyHenry course with Luis, who was my Teaching Assistant. He was distinguished by his patience, support, positivity, and as a great web developer who always knew how to answer our questions!"
+            "rol": "Estudiante Desarrolladora FullStack - SoyHenry Bootcamp",
+            "text": "Tuve el placer de hacer el curso de SoyHenry con Luis, quien fue mi Teaching Assistant. Se destacó por su paciencia, apoyo, positividad y como gran desarrollador web que siempre supo responder nuestras preguntas."
         },
         {
             "name": "José Carlos Mestre",
-            "rol": "FullStack Developer Student - SoyHenry Bootcamp",
-            "text": "We met at SoyHenry. His help as a TA was excellent. He is a great person who supported both my colleagues and me, providing emotional support as well as technical assistance."
+            "rol": "Estudiante Desarrollador FullStack - SoyHenry Bootcamp",
+            "text": "Nos conocimos en SoyHenry. Su ayuda como TA fue excelente. Es una gran persona que apoyó tanto a mis compañeros como a mí, brindándonos apoyo emocional además de asistencia técnica."
         },
         {
             "name": "Claudio Di Toro",
-            "rol": "FullStack Developer Student - SoyHenry Bootcamp",
-            "text": "During the Henry course, Luis was my TA, demonstrating great leadership skills, extensive knowledge in Full Stack development, excellent interpersonal skills, and always willing to lend a hand to those in need."
+            "rol": "Estudiante Desarrollador FullStack - SoyHenry Bootcamp",
+            "text": "Durante el curso de Henry, Luis fue mi TA, demostrando grandes habilidades de liderazgo, conocimientos extensos en desarrollo Full Stack, excelentes habilidades interpersonales y siempre dispuesto a echar una mano a quienes lo necesitaban."
         }
     ],
     "skills": {
@@ -56,27 +92,27 @@
             {
                 "icon": "FaCode",
                 "title": "Desarrollo frontend",
-                "text": "Develop and maintain user-facing features for web applications using HTML, CSS, and JavaScript. Translate design mock-ups and wireframes into high-quality code."
+                "text": "Desarrollar y mantener características orientadas al usuario para aplicaciones web utilizando HTML, CSS y JavaScript. Traducir maquetas de diseño y wireframes a código de alta calidad."
             },
             {
                 "icon": "DiResponsive",
                 "title": "Diseño responsivo",
-                "text": " Ensure that all web applications are responsive and compatible with various devices, browsers, and platforms."
+                "text": "Asegurar que todas las aplicaciones web sean responsivas y compatibles con diversos dispositivos, navegadores y plataformas."
             },
             {
                 "icon": "GiNetworkBars",
-                "title": "Optimizacion",
-                "text": "Optimize applications for maximum speed and scalability."
+                "title": "Optimización",
+                "text": "Optimizar aplicaciones para obtener la máxima velocidad y escalabilidad."
             },
             {
                 "icon": "RiTeamFill",
                 "title": "Trabajo en equipo",
-                "text": "Collaborate with product managers, designers, and back-end developers to create seamless and visually appealing user experiences."
+                "text": "Colaborar con gerentes de producto, diseñadores y desarrolladores backend para crear experiencias de usuario sin fisuras y visualmente atractivas."
             },
             {
                 "icon": "GoGoal",
                 "title": "Aprendizaje continuo",
-                "text": "Stay current on industry trends, best practices, and emerging technologies to ensure the team is using the most effective tools and techniques."
+                "text": "Mantenerse al día con las tendencias de la industria, las mejores prácticas y las tecnologías emergentes para garantizar que el equipo esté utilizando las herramientas y técnicas más efectivas."
             }
         ]
     },
