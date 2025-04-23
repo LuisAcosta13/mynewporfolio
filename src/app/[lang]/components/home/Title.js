@@ -51,7 +51,7 @@ export default function Title({ dictionary, speed = 50 }) {
 
     return (
         <div className="title-content">
-            <LittleRobotCanvas />
+            {/* <LittleRobotCanvas /> */}
             <div className="chatbot-ui">
                 <div className="title-text">
                     <div className="title-name">
@@ -61,10 +61,12 @@ export default function Title({ dictionary, speed = 50 }) {
                     {/* <span className="title-rol">{dictionary.rol}</span> */}
                 </div>
                 {shouldDisplayButtons && <div className="chatbot-options">
-                    <button onClick={() => handleResponse(dictionary.responses.profile)}>Who is Luis Acosta?</button>
-                    <button>What does he do?</button>
-                    <button>What's his background?</button>
-                    <button>What do people say about him?</button>
+                  {dictionary.responses.map((q, index) => 
+                      <button key={index} onClick={() => handleResponse(q.answer)}>
+                        {q.question}
+                      </button>
+                    )
+                  }
                 </div>}
             </div>
         </div>

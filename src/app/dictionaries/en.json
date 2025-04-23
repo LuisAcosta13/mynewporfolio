@@ -1,12 +1,25 @@
 {
-    "greetings": "Hello and welcome to Luis Acosta's Website! How can I help?",
+    "greetings": "Welcome to Luis Acosta's Website! How can I assist you today?",
     "rol": "Frontend Software Engineer",
     "about_title": "Who am I?",
-    "responses": {
-        "profile": "Luis is a Frontend Software Engineer from Argentina. Experienced, responsible and resorceful, he has a great desire to learn and guide others.",
-        "greeting_2": "I'm here to help you with any questions or information you need.",
-        "greeting_3": "Feel free to ask me anything about my work, skills, or experiences."
-    },
+    "responses": [
+        {
+            "question": "Who is Luis Acosta?",
+            "answer": "Luis is a Frontend Software Engineer from Argentina. Experienced, responsible and resorceful, he has a great desire to learn and guide others."
+        },
+        {
+            "question": "What does he do?",
+            "answer": "He loves making the code editor his playground, working with Project Managers, Designers and Backend Engineers, but he also has experience coordinating teams from 3 to 6 people"
+        },
+        {
+            "question": "What's his background?",
+            "answer": "He spent the last few years working for french companies such as Canari Studio and Le Comptoir Digital as a developer. His main clients includes Mc Donald's, Mitel and Data.ai."
+        },
+        {
+            "question": "What do people say about him?",
+            "answer": "Some people would like you to know what they think about him. I'll let you read more at the bottom of this site."
+        }
+    ],
     "menu": {
         "theme": "Change theme",
         "language": "Change language"
