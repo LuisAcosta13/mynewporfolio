@@ -123,7 +123,7 @@
             "title": "Work experiences",
             "jobs": [
                 {
-                    "company": "Freelancer",
+                    "company": "Le Comptoir Digital",
                     "position": "Frontend developer",
                     "location": "Remote - Based in Argentina",
                     "date": "2024 - present"
@@ -139,6 +139,12 @@
                     "position": "Fullstack Teaching Assistant",
                     "location": "Argentina",
                     "date": "2022 - 2023"
+                },
+                {
+                    "company": "Argentinian Army",
+                    "position": "IT assistant",
+                    "location": "Argentina",
+                    "date": "2019 - 2023"
                 }
             ]
         },
@@ -159,11 +165,19 @@
                 },
                 {
                     "name": "Next.js",
-                    "level": 80
+                    "level": 70
                 },
                 {
                     "name": "TypeScript",
-                    "level": 80
+                    "level": 70
+                },
+                {
+                    "name": "React Native",
+                    "level": 50
+                },
+                {
+                    "name": "React Three Fiber",
+                    "level": 20
                 }
             ]
         }
