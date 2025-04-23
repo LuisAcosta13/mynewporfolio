@@ -145,6 +145,8 @@
         margin: 0;
 
         .title-content {
+            align-items: center;
+            padding: 20px;
             .title-text {
                 align-items: flex-start;
                 text-align: center;
@@ -187,22 +189,44 @@
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
     .main-content {
         margin: 0;
 
         .title-content {
             margin: 0;
+            padding-top: 50px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
 
-            .title-text {
-                margin: 0;
-                text-align: center;
-                display: flex;
-                align-items: center;
+            .chatbot-ui{
+                padding: 10px;
+
+                .title-text {
+                    margin: 0;
+                    text-align: center;
+                    display: flex;
+                    align-items: center;
+                    padding: 20px;
+
+                    .title-name {
+                        font-size: 20px;
+                    }
+
+                    &::after {
+                        display: none;
+                    }
+                }
+
+                .chatbot-options{
+                    button{
+                        width: 100%;
+                        padding: 10px;
+                        font-size: 16px;
+                    }
+                }
             }
         }
 
