@@ -2,6 +2,7 @@
 
 $base-color1: #e8e8e8;
 $base-color2: linear-gradient(90deg, rgba(0, 63, 135, 1) 6%, rgba(135, 186, 226, 1) 52%, rgba(230, 230, 230, 1) 100%);
+$target-color2: linear-gradient(90deg, rgba(135, 63, 0, 1) 6%, rgba(226, 135, 186, 1) 52%, rgba(255, 240, 230, 1) 100%);
 $base-color3: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(3, 0, 69, 1) 50%, rgba(0, 5, 184, 1) 100%);
 $base-color4: #002488;
 $base-color5: #4d3bd0;
@@ -17,7 +18,9 @@ html {}
 body {
     margin: 0;
     padding-bottom: 50px;
-    background: $base-color2;
+    background: linear-gradient(90deg, rgba(0, 63, 135, 1) 6%, rgba(135, 186, 226, 1) 52%, rgba(230, 230, 230, 1) 100%);
+    background-attachment: fixed;
+    transition: background 0.3s ease;
     color: $base-color8;
     font-family: "Ubuntu", sans-serif;
     font-weight: 400;

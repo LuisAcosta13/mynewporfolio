@@ -9,63 +9,109 @@ export function LittleRobot(props) {
   const { actions } = useAnimations(animations, group)
   const [colorIndex, setColorIndex] = React.useState(0)
 
-const colors = [
-  new THREE.Color(0xff0000),
-  new THREE.Color(0xff8800),
-  new THREE.Color(0x00ff88),
-  new THREE.Color(0xff0088),
-  new THREE.Color(0xffff00),
-]
+  const colors = [
+    new THREE.Color(0x00ffff), // Cian eléctrico
+    new THREE.Color(0x0088ff), // Azul neón
+    new THREE.Color(0x00ff88), // Verde neón
+    new THREE.Color(0x8800ff), // Púrpura brillante
+    new THREE.Color(0x6666ff), // Azul metálico suave
+  ]
 
-const handleColorChange = () => {
-  const nextIndex = (colorIndex + 1) % colors.length
-  setColorIndex(nextIndex)
+  const handleColorChange = () => {
+    const nextIndex = (colorIndex + 1) % colors.length
+    setColorIndex(nextIndex)
 
-  const newColor = colors[nextIndex]
+    const newColor = colors[nextIndex]
 
-  // Aplicar el nuevo color al material del robot
-  const robotMaterial = nodes.Robot_Blue_Light_0?.material
-  if (robotMaterial) {
-    robotMaterial.color = newColor
-    robotMaterial.emissive = newColor
+    // Aplicar el nuevo color al material del robot
+    const robotMaterial = nodes.Robot_Blue_Light_0?.material
+    if (robotMaterial) {
+      robotMaterial.color = newColor
+      robotMaterial.emissive = newColor
+    }
+
+    // También podés cambiar los ojos si querés
+    const eyesMaterial = nodes.Eyes_Blue_Light_0?.material
+    if (eyesMaterial) {
+      eyesMaterial.color = newColor
+      eyesMaterial.emissive = newColor
+    }
   }
 
-  // También podés cambiar los ojos si querés
-  const eyesMaterial = nodes.Eyes_Blue_Light_0?.material
-  if (eyesMaterial) {
-    eyesMaterial.color = newColor
-    eyesMaterial.emissive = newColor
-  }
-}
-
-   useEffect(() => {
-      if (actions) {
-        actions[Object.keys(actions)[0]].play()
-      }
-      
-      // Clean up on unmount
-      //return () => actions && Object.values(actions).forEach(action => action.stop())
-    }, [actions])
-
-    useEffect(() => {
-      if (actions) {
-        actions[Object.keys(actions)[0]].play();
-      }
+  useEffect(() => {
+    if (props.isThinking) {
+      const robotMaterial = nodes.Robot_Blue_Light_0?.material;
+      const eyesMaterial = nodes.Eyes_Blue_Light_0?.material;
   
-      // Cambiar otros materiales que quieras que se vean más brillantes
-      // Por ejemplo, cambiar el material del robot:
-      if (nodes.Robot_Blue_Light_0) {
-        const eyesMaterial = nodes.Robot_Blue_Light_0.material;
-        if (eyesMaterial) {
-          eyesMaterial.emissive = new THREE.Color(0x00ffff); // Azul cian brillante
-          eyesMaterial.emissiveIntensity = 1; // ¡Mucho más brillante!
-          eyesMaterial.color = new THREE.Color(0x0088ff); // Color base más saturado
-          eyesMaterial.roughness = 0.1; // Más suave aún
-          eyesMaterial.metalness = 1; // Totalmente metálico
-          eyesMaterial.toneMapped = false; // ¡Importante! Permite que se vea el brillo extremo
+      if (!robotMaterial || !eyesMaterial) return;
+  
+      // Guardar colores originales
+      const originalColor = robotMaterial.color.clone();
+      const originalEmissive = robotMaterial.emissive.clone();
+  
+      let startTime = Date.now();
+      let animationFrameId;
+  
+      const animateRoboticGradient = () => {
+        const elapsed = Date.now() - startTime;
+        const duration = 1000;
+        const t = (elapsed % duration) / duration;
+  
+        // Interpolar entre colores
+        const index = Math.floor(t * colors.length);
+        const nextIndex = (index + 1) % colors.length;
+        const localT = (t * colors.length) % 1;
+  
+        const currentColor = colors[index].clone().lerp(colors[nextIndex], localT);
+  
+        robotMaterial.color.copy(currentColor);
+        robotMaterial.emissive.copy(currentColor);
+        eyesMaterial.color.copy(currentColor);
+        eyesMaterial.emissive.copy(currentColor);
+  
+        if (elapsed < duration) {
+          animationFrameId = requestAnimationFrame(animateRoboticGradient);
+        } else {
+          // Restaurar colores originales
+          robotMaterial.color.copy(originalColor);
+          robotMaterial.emissive.copy(originalEmissive);
+          eyesMaterial.color.copy(originalColor);
+          eyesMaterial.emissive.copy(originalEmissive);
         }
+      };
+  
+      animateRoboticGradient();
+  
+      return () => cancelAnimationFrame(animationFrameId);
+    }
+  }, [props.isThinking]);
+
+  useEffect(() => {
+    if (actions) {
+      actions[Object.keys(actions)[0]].play()
+    }
+
+    // Clean up on unmount
+    //return () => actions && Object.values(actions).forEach(action => action.stop())
+  }, [actions])
+
+  useEffect(() => {
+    if (actions) {
+      actions[Object.keys(actions)[0]].play();
+    }
+
+    if (nodes.Robot_Blue_Light_0) {
+      const eyesMaterial = nodes.Robot_Blue_Light_0.material;
+      if (eyesMaterial) {
+        eyesMaterial.emissive = new THREE.Color(0x00ffff); // Azul cian brillante
+        eyesMaterial.emissiveIntensity = 1; // ¡Mucho más brillante!
+        eyesMaterial.color = new THREE.Color(0x0088ff); // Color base más saturado
+        eyesMaterial.roughness = 0.1; // Más suave aún
+        eyesMaterial.metalness = 1; // Totalmente metálico
+        eyesMaterial.toneMapped = false; // ¡Importante! Permite que se vea el brillo extremo
       }
-    }, [actions, nodes]);
+    }
+  }, [actions, nodes]);
 
   return (
     <group ref={group} {...props} dispose={null} onClick={handleColorChange}>

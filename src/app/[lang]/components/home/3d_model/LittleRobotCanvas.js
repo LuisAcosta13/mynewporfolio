@@ -6,7 +6,7 @@ import { OrbitControls, Stage, Environment } from '@react-three/drei'
 import { useTheme } from "@/app/[lang]/ThemeContext";
 import '../../../styles/robotModel.scss'
 
-export default function LittleRobotCanvas() {
+export default function LittleRobotCanvas({isThinking}) {
     const { theme } = useTheme();
     return (
         <div className="robotModel">
@@ -16,7 +16,7 @@ export default function LittleRobotCanvas() {
                 <spotLight position={[8, 0, 5]} angle={0.4} penumbra={10} intensity={theme === "dark" ? 10 : 100} />
                 <directionalLight position={[5, 5, 5]} intensity={0.1} />
                 <Stage environment={theme === "light" && "warehouse"} intensity={0.8} contactShadow={true} shadows={true}>
-                    <LittleRobot />
+                    <LittleRobot isThinking={isThinking} />
                 </Stage>
                 <OrbitControls />
             </Canvas>

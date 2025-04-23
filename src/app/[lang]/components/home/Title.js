@@ -6,6 +6,7 @@ import { useEffect, useState, useRef } from "react";
 export default function Title({ dictionary, speed = 60 }) {
   const [displayedText, setDisplayedText] = useState("");
   const [shouldDisplayButtons, setShouldDisplayButtons] = useState(false);
+  const [isThinking, setIsThinking] = useState(false); // Estado para controlar el texto que se está escribiendo
   const indexRef = useRef(0);
   const textRef = useRef(""); // este acumula el texto real
   const responseRef = useRef(null);
@@ -25,6 +26,7 @@ export default function Title({ dictionary, speed = 60 }) {
       if (indexRef.current >= text.length) {
         clearInterval(interval);
         setShouldDisplayButtons(true); // muestra los botones después de que se haya mostrado el texto
+        setIsThinking(false);
 
         setTimeout(() => {
           if (responseRef.current?.link) {
@@ -41,13 +43,14 @@ export default function Title({ dictionary, speed = 60 }) {
   }, []);
 
   const handleResponse = (response) => {
+    setIsThinking(true)
     responseRef.current = response;
     writeText(response.answer);
   }
 
   return (
     <div className="title-content">
-      <LittleRobotCanvas />
+      <LittleRobotCanvas isThinking={isThinking}/>
       <div className="chatbot-ui">
         <div className="title-text">
           <div className="title-name">
