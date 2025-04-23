@@ -45,13 +45,39 @@ body {
 
         .main-content {
             .title-content {
+
+                .chatbot-ui {
+                    .chatbot-options{
+                        button{
+                            background-color: $base-color11;
+                            color: $base-color1;
+                            border: solid 1px $base-color11;
+                            box-shadow: 3px 3px 2px 3px rgba(0, 0, 0, 0.15);
+    
+                            &:hover {
+                                background-color: darken($base-color1, 10%);
+                                color: $base-color11
+                            }
+                        }
+                    }
+                }
+                
                 .title-text {
+                    background-color: $base-color11;
+
+                    &::after{
+                        background-color: $base-color11;
+                    }
                     .title-name {
-                        color: $base-color5;
+                        color: $base-color1;
                     }
 
                     .title-rol {
                         color: $base-color1;
+                    }
+
+                    .cursor{
+                        background-color: $base-color1;
                     }
                 }
             }
