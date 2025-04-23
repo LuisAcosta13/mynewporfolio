@@ -117,6 +117,10 @@ body {
 
             .skills_list .skill_card {
 
+                &:nth-child(odd) {
+                    background: linear-gradient(0deg, rgba(41, 35, 102, 0.8113446062018558) 30%, rgba(247, 247, 247, 0) 100%);
+                }
+
                 &:nth-child(even) {
                     background: $base-color11;
                 }
@@ -153,7 +157,7 @@ body {
                 }
 
                 .tools{
-                    background-color: $base-color11;
+                    background: $base-color11;
 
                     .tools-label {
                         border-bottom: solid 1px $base-color5;
