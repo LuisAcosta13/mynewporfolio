@@ -6,7 +6,6 @@ import { useEffect, useState, useRef } from "react";
 export default function Title({ dictionary, speed = 60 }) {
   const [displayedText, setDisplayedText] = useState("");
   const [shouldDisplayButtons, setShouldDisplayButtons] = useState(false);
-  const [isWriting, setIsWriting] = useState(true);
   const indexRef = useRef(0);
   const textRef = useRef(""); // este acumula el texto real
   const responseRef = useRef(null);
@@ -16,7 +15,6 @@ export default function Title({ dictionary, speed = 60 }) {
     indexRef.current = 0;
     textRef.current = "";
     setDisplayedText("");
-    setIsWriting(true);
 
     const interval = setInterval(() => {
       const nextChar = text.charAt(indexRef.current);
@@ -27,7 +25,7 @@ export default function Title({ dictionary, speed = 60 }) {
       if (indexRef.current >= text.length) {
         clearInterval(interval);
         setShouldDisplayButtons(true); // muestra los botones después de que se haya mostrado el texto
-        setIsWriting(false); // Espera a que el texto termine de escribir para realizar alguna accion
+
         setTimeout(() => {
           if (responseRef.current?.link) {
             window.open(responseRef.current.link, "_blank");
@@ -43,9 +41,8 @@ export default function Title({ dictionary, speed = 60 }) {
   }, []);
 
   const handleResponse = (response) => {
-    writeText(response.answer)
-
     responseRef.current = response;
+    writeText(response.answer);
   }
 
   return (
