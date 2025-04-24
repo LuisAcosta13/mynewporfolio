@@ -48,7 +48,6 @@
         }
 
         .slick-slide {
-            &.slick-active {}
 
             .card {
                 background-color: $base-color1;
@@ -87,7 +86,7 @@
     }
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 1400px) {
     .slider-container {
         margin-left: 0;
         margin-right: 0;
@@ -97,7 +96,6 @@
             margin-right: 0;
             display: flex;
             flex-direction: row;
-            justify-content: center;
 
             .slick-slide {
                 .card {
@@ -148,12 +146,37 @@
             background: none;
         }
 
-        .slick-list {
-            margin-left: 0;
-            margin-right: 0;
+        .slick-slider {
+            display: flex;
+            justify-content: center;
+            box-sizing: border-box;
 
-            .slick-slide .card {
-                width: 100%;
+            .slick-list {
+                padding: 0;
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+                width: 100%;  /* Aseguramos que ocupe todo el ancho disponible */
+
+                .slick-track {
+                    display: flex;
+                    justify-content: center;  /* Aseguramos que las cards se centren */
+                    gap: 20px;
+                    margin: 0;
+                    width: 100%;  /* Esto asegura que ocupe todo el ancho disponible */
+                }
+
+                .slick-slide {
+                    display: flex;
+                    align-items: center;
+                    margin: 0 auto;
+                    width: auto;  /* Asegura que no haya un ancho fijo que cause desplazamiento */
+                }
+            }
+
+            .card {
+                margin: 0;
+                padding: 0;
 
                 .padding {
                     padding: 30px 40px;
@@ -178,5 +201,6 @@
                 }
             }
         }
+
     }
 }

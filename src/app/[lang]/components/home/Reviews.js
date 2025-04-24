@@ -16,7 +16,7 @@ function Reviews({ recommendations }) {
     speed: 2000,
     dots: true,
     arrows: false,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 5000,
     cssEase: "linear",
     pauseOnHover: true,
@@ -26,10 +26,10 @@ function Reviews({ recommendations }) {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          infinite: true,
-          dots: true
+          infinite: false,
+          dots: true,
         }
-      }
+      },
     ]
   };
 
