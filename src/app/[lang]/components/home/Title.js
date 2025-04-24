@@ -10,6 +10,7 @@ export default function Title({ dictionary, speed = 60 }) {
   const indexRef = useRef(0);
   const textRef = useRef(""); // este acumula el texto real
   const responseRef = useRef(null);
+  const [questions, setQuestions] = useState(dictionary.responses);
 
   const writeText = (text) => {
     setShouldDisplayButtons(false);
@@ -42,10 +43,21 @@ export default function Title({ dictionary, speed = 60 }) {
     writeText(dictionary.greetings);
   }, []);
 
+  const changeQuestions = (response) => {
+    let questionsArray = response;
+
+    // Add go back button
+    questionsArray.push(dictionary.goBackResponse);
+    setQuestions(questionsArray);
+  }
+
   const handleResponse = (response) => {
     setIsThinking(true)
     responseRef.current = response;
     writeText(response.answer);
+
+    response.goBackButton && setQuestions(dictionary.responses);
+    response.otherQuestions && changeQuestions(response.otherQuestions);
   }
 
   return (
@@ -60,7 +72,7 @@ export default function Title({ dictionary, speed = 60 }) {
           {/* <span className="title-rol">{dictionary.rol}</span> */}
         </div>
         {shouldDisplayButtons && <div className="chatbot-options">
-          {dictionary.responses.map((q, index) =>
+          {questions && questions.map((q, index) =>
             <button key={index} onClick={() => handleResponse(q)}>
               {q.question}
             </button>

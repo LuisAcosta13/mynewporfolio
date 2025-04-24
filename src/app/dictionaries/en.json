@@ -5,39 +5,46 @@
     "responses": [
         {
             "question": "Who is Luis Acosta?",
-            "answer": "Beep boop! 🤖 Allow me to introduce Luis Acosta. He’s a Frontend Software Engineer from Argentina with a strong drive to learn, build, and help others grow. Responsible? ✅ Resourceful? ✅ Always curious? Double ✅. Whether he’s coding or mentoring, Luis brings experience and heart to every project he touches."
+            "answer": "Beep boop! 🤖 Allow me to introduce Luis Acosta. He’s a Frontend Software Engineer from Argentina with a strong drive to learn, build, and help others grow. Responsible? ✅ Resourceful? ✅ Always curious? Double ✅. Whether he’s coding or mentoring, Luis brings experience and heart to every project he touches.",
+            "otherQuestions": [
+                {
+                    "question": "What does he do?",
+                    "answer": "He enjoys turning lines of code into useful, beautiful things—like magic, but with JavaScript! He works hand in hand with Project Managers, Designers, and Backend Engineers to build seamless digital experiences. Oh! And he’s also led development teams of 3 to 6 humans, keeping things on track with a smile (or at least a well-organized Trello board)."
+                },
+                {
+                    "question": "What's his background?",
+                    "answer": "Accessing memory banks... 🧠💾 Luis has spent the past few years coding away for French companies like Canari Studio and Le Comptoir Digital. He’s contributed to projects for big names such as McDonald’s, Mitel, and Data.ai—yep, he’s been busy building cool stuff for some pretty cool clients!"
+                },
+                {
+                    "question": "What do people say about him?",
+                    "answer": "Processing testimonials... 💬✨ Some humans have shared their thoughts about working with Luis—and they're quite nice! But don’t take my word for it… scroll down to see what they had to say!"
+                },
+                {
+                    "question": "What are his hobbies?",
+                    "answer": "Beep beep! 🤖 Luis loves reading (he’s a Game of Thrones fan!), playing video games, watching movies, and spending time with his family. He also enjoys traveling and exploring new places. 🌍✨"
+                },
+                {
+                    "question": "What are his goals?",
+                    "answer": "Luis aims to continue growing as a developer and mentor, helping others while also expanding his own skills. He dreams of working on exciting projects that make a real difference in people’s lives! 🚀"
+                }
+            ]
         },
         {
-            "question": "What does he do?",
-            "answer": "He enjoys turning lines of code into useful, beautiful things—like magic, but with JavaScript! He works hand in hand with Project Managers, Designers, and Backend Engineers to build seamless digital experiences. Oh! And he’s also led development teams of 3 to 6 humans, keeping things on track with a smile (or at least a well-organized Trello board)."
-        },
-        {
-            "question": "What's his background?",
-            "answer": "Accessing memory banks... 🧠💾 Luis has spent the past few years coding away for French companies like Canari Studio and Le Comptoir Digital. He’s contributed to projects for big names such as McDonald’s, Mitel, and Data.ai—yep, he’s been busy building cool stuff for some pretty cool clients!"
-        },
-        {
-            "question": "What do people say about him?",
-            "answer": "Processing testimonials... 💬✨ Some humans have shared their thoughts about working with Luis—and they're quite nice! But don’t take my word for it… scroll down to see what they had to say!"
-        },
-        {
-            "question": "What are his hobbies?",
-            "answer": "Beep beep! 🤖 Luis loves reading (he’s a Game of Thrones fan!), playing video games, watching movies, and spending time with his family. He also enjoys traveling and exploring new places. 🌍✨"
-        },
-        {
-            "question": "What are his goals?",
-            "answer": "Luis aims to continue growing as a developer and mentor, helping others while also expanding his own skills. He dreams of working on exciting projects that make a real difference in people’s lives! 🚀"
-        },
-        {
-            "question": "Where can I find him on LinkedIn?",
-            "answer": "You can connect with Luis on LinkedIn! 🚀 Let me show you the way to his profile and let’s get networking! 🤝",
+            "question": "Can I find him on LinkedIn?",
+            "answer": "You can find and connect with Luis on LinkedIn! 🚀 Let me show you the way to his profile and let’s get networking! 🤝",
             "link": "https://www.linkedin.com/in/react-front"
         },
         {
-            "question": "Can I download his CV?",
+            "question": "I need his CV.",
             "answer": "Of course! 📄 You can download Luis's CV right here. Just a second...",
             "link": "/Resume_Luis_Acosta(EN-2025).pdf"
         }
     ],
+    "goBackResponse": {
+        "question": "I need something else.",
+        "answer": "Absolutely! 🤖 Just let me know what you need, and I’ll be happy to assist you!",
+        "goBackButton": true
+    },
     "menu": {
         "theme": "Change theme",
         "language": "Change language"

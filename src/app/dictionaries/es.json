@@ -5,39 +5,46 @@
     "responses": [
         {
             "question": "¿Quién es Luis Acosta?",
-            "answer": "¡Beep boop! 🤖 Permíteme presentarte a Luis Acosta. Es un Ingeniero de Software Frontend de Argentina con una gran motivación para aprender, construir y ayudar a otros a crecer. ¿Responsable? ✅ ¿Ingenioso? ✅ ¿Siempre curioso? Doble ✅. Ya sea programando o mentorando, Luis aporta experiencia y corazón a cada proyecto que toca."
+            "answer": "¡Beep boop! 🤖 Permíteme presentarte a Luis Acosta. Es un Ingeniero de Software Frontend de Argentina con una gran motivación para aprender, construir y ayudar a otros a crecer. ¿Responsable? ✅ ¿Ingenioso? ✅ ¿Siempre curioso? Doble ✅. Ya sea programando o mentorando, Luis aporta experiencia y corazón a cada proyecto que toca.",
+            "otherQuestions": [
+                {
+                    "question": "¿Qué hace?",
+                    "answer": "Disfruta convertir líneas de código en cosas útiles y hermosas, ¡como magia, pero con JavaScript! Trabaja codo a codo con Gerentes de Proyecto, Diseñadores e Ingenieros Backend para crear experiencias digitales sin interrupciones. ¡Ah! Y también ha liderado equipos de desarrollo de 3 a 6 personas, manteniendo todo en orden con una sonrisa (o al menos con un Trello bien organizado)."
+                },
+                {
+                    "question": "¿Cuál es su experiencia?",
+                    "answer": "Accediendo a los bancos de memoria... 🧠💾 Luis ha pasado los últimos años programando para empresas francesas como Canari Studio y Le Comptoir Digital. Ha contribuido en proyectos para grandes nombres como McDonald’s, Mitel y Data.ai. ¡Sí, ha estado muy ocupado creando cosas geniales para algunos clientes muy cool!"
+                },
+                {
+                    "question": "¿Qué dicen las personas sobre él?",
+                    "answer": "Procesando testimonios... 💬✨ Algunos humanos han compartido sus pensamientos sobre trabajar con Luis, ¡y son bastante buenos! Pero no te quedes con mi palabra... desplázate hacia abajo para ver qué dijeron."
+                },
+                {
+                    "question": "¿Cuáles son sus pasatiempos?",
+                    "answer": "¡Bip bip! 🤖 Luis disfruta mucho de la lectura (¡es fanático de Game of Thrones!), jugar videojuegos, ver películas y pasar tiempo con su familia. Además, le encanta viajar y descubrir nuevos lugares. 🌍✨"
+                },
+                {
+                    "question": "¿Cuáles son sus metas?",
+                    "answer": "Luis tiene como objetivo seguir creciendo como desarrollador y mentor, ayudando a otros mientras sigue expandiendo sus propias habilidades. ¡Sueña con trabajar en proyectos emocionantes que realmente marquen la diferencia en la vida de las personas! 🚀"
+                }
+            ]
         },
         {
-            "question": "¿Qué hace?",
-            "answer": "Disfruta convertir líneas de código en cosas útiles y hermosas, ¡como magia, pero con JavaScript! Trabaja codo a codo con Gerentes de Proyecto, Diseñadores e Ingenieros Backend para crear experiencias digitales sin interrupciones. ¡Ah! Y también ha liderado equipos de desarrollo de 3 a 6 personas, manteniendo todo en orden con una sonrisa (o al menos con un Trello bien organizado)."
-        },
-        {
-            "question": "¿Cuál es su experiencia?",
-            "answer": "Accediendo a los bancos de memoria... 🧠💾 Luis ha pasado los últimos años programando para empresas francesas como Canari Studio y Le Comptoir Digital. Ha contribuido en proyectos para grandes nombres como McDonald’s, Mitel y Data.ai. ¡Sí, ha estado muy ocupado creando cosas geniales para algunos clientes muy cool!"
-        },
-        {
-            "question": "¿Qué dicen las personas sobre él?",
-            "answer": "Procesando testimonios... 💬✨ Algunos humanos han compartido sus pensamientos sobre trabajar con Luis, ¡y son bastante buenos! Pero no te quedes con mi palabra... desplázate hacia abajo para ver qué dijeron."
-        },
-        {
-            "question": "¿Cuáles son sus pasatiempos?",
-            "answer": "¡Bip bip! 🤖 Luis disfruta mucho de la lectura (¡es fanático de Game of Thrones!), jugar videojuegos, ver películas y pasar tiempo con su familia. Además, le encanta viajar y descubrir nuevos lugares. 🌍✨"
-        },
-        {
-            "question": "¿Cuáles son sus metas?",
-            "answer": "Luis tiene como objetivo seguir creciendo como desarrollador y mentor, ayudando a otros mientras sigue expandiendo sus propias habilidades. ¡Sueña con trabajar en proyectos emocionantes que realmente marquen la diferencia en la vida de las personas! 🚀"
-        },
-        {
-            "question": "¿Dónde puedo encontrarlo en LinkedIn?",
-            "answer": "¡Puedes conectar con Luis en LinkedIn! 🚀 ¡Déjame mostrarte el camino a su perfil y vamos a hacer networking! 🤝",
+            "question": "¿Puedo encontrarlo en LinkedIn?",
+            "answer": "¡Puedes encontrar y conectar con Luis en LinkedIn! 🚀 ¡Déjame mostrarte el camino a su perfil y vamos a hacer networking! 🤝",
             "link": "https://www.linkedin.com/in/react-front"
         },
         {
-            "question": "¿Puedo descargar su CV?",
+            "question": "Necesito su CV.",
             "answer": "¡Por supuesto! 📄 Puedes descargar el CV de Luis justo aquí. Un momento...",
             "link": "/CV_Luis_Acosta(ES-2025).pdf"
         }
     ],
+    "goBackResponse": {
+        "question": "Necesito otra cosa.",
+        "answer": "¡Por supuesto! 🤖 Solo dime qué necesitas y estaré encantado de ayudarte.",
+        "goBackButton": true
+    },
     "menu": {
         "theme": "Change theme",
         "language": "Change language"
