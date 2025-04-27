@@ -9,6 +9,8 @@
     padding: 50px 0 0;
     background-color: $base-color10;
     box-shadow: 0px 5px 5px 5px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
 
     .experience_title {
         display: flex;
@@ -147,7 +149,7 @@
         }
 
         .experience-content {
-            gap: 50px;
+            gap: 0px;
             display: flex;
             flex-direction: column;
             justify-content: center;

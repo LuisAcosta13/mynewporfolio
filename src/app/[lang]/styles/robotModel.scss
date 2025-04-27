@@ -1,3 +1,5 @@
+@import "config.scss";
+
 .robotModel{
     width: 45%;
     height: 100vh;
@@ -13,5 +15,8 @@
     .robotModel{
         width: 50%;
         height: 30vh;
+    }
+    .skillsMap{
+        height: 220px;
     }
 }

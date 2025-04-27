@@ -30,7 +30,7 @@ function SkillNode({ position, name }) {
 
       pulseRef.current += delta;
 
-      const pulseSpeed = userInteracted ? 1.5 : 3; // Pulso más lento después de interactuar
+      const pulseSpeed = userInteracted ? 1.5 : 5; // Pulso más lento después de interactuar
       const pulseStrength = userInteracted ? 0.05 : 0.2; // Pulso más sutil después de interactuar
 
       const intensity = 0.5 + Math.sin(pulseRef.current * pulseSpeed) * pulseStrength;
@@ -44,8 +44,8 @@ function SkillNode({ position, name }) {
 
       // Cambio en opacidad:
       nodeRef.current.material.opacity = userInteracted
-        ? THREE.MathUtils.clamp(0.8 + 0.2 * t, 0.8, 1) // después de interactuar, casi siempre opaco
-        : THREE.MathUtils.clamp(0.5 + 0.5 * t, 0.5, 1);
+        ? THREE.MathUtils.clamp(0.8 + 0.2 * t, 1, 1) // después de interactuar, casi siempre opaco
+        : THREE.MathUtils.clamp(0.5 + 0.5 * t, 0.1, 1);
 
     }
   });
@@ -116,10 +116,10 @@ function Connections({ from, to }) {
 
 export default function SkillMap({ skills }) {
   return (
-    <Canvas className="SkillsMap" camera={{ position: [0, 0, 15], fov: 50 }}>
+    <Canvas className="SkillsMap" camera={{ position: [0, 0, 12], fov: 50 }}>
       <OrbitControls minDistance={1} maxDistance={20} />
-      <ambientLight intensity={0.4} />  // Suaviza la iluminación general
-      <pointLight position={[10, 10, 10]} intensity={1.5} />  // Luz más cálida
+      <ambientLight intensity={0.4} />
+      <pointLight position={[10, 10, 10]} intensity={1.5} />
       <directionalLight position={[0, 10, 0]} intensity={0.5} castShadow />
       {skills.map(skill => (
         <SkillNode key={skill.id} position={skill.position} name={skill.name} />

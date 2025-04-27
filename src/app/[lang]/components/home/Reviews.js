@@ -13,7 +13,7 @@ function Reviews({ recommendations }) {
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
-    speed: 2000,
+    speed: 100,
     dots: true,
     arrows: false,
     autoplay: false,

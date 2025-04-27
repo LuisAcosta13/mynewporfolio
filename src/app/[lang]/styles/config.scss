@@ -5,7 +5,7 @@ $base-color2: linear-gradient(90deg, rgba(0, 63, 135, 1) 6%, rgb(0, 113, 199) 52
 $target-color2: linear-gradient(90deg, rgba(135, 63, 0, 1) 6%, rgba(226, 135, 186, 1) 52%, rgba(255, 240, 230, 1) 100%);
 $base-color3: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgb(2, 0, 38) 50%, rgb(0, 4, 116) 100%);
 $base-color4: #002488;
-$base-color5: #4d3bd0;
+$base-color5: #8c00ff;
 $base-color6: #1b0c20;
 $base-color7: #a900e2;
 $base-color8: #000000;
@@ -29,6 +29,31 @@ body {
         background: $base-color3;
         color: $base-color1;
 
+        .sky {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            //background: #000; /* fondo oscuro */
+            overflow: hidden;
+            z-index: -1;
+
+            .star {
+                position: absolute;
+                width: 2px;
+                height: 2px;
+                background: white;
+                border-radius: 50%;
+                opacity: 0.8;
+                animation: twinkle 0.1s infinite alternate;
+            }
+
+            .cloud {
+                display: none;
+            }
+        }
+
+
+
         .menu {
             background-color: $base-color3;
             color: $base-color1;
@@ -37,7 +62,7 @@ body {
                 color: $base-color5
             }
 
-            .languages{
+            .languages {
                 background-color: $base-color11;
             }
         }
@@ -46,13 +71,13 @@ body {
             .title-content {
 
                 .chatbot-ui {
-                    .chatbot-options{
-                        button{
+                    .chatbot-options {
+                        button {
                             background-color: $base-color11;
                             color: $base-color1;
                             border: solid 1px $base-color11;
                             box-shadow: 3px 3px 2px 3px rgba(0, 0, 0, 0.15);
-    
+
                             &:hover {
                                 background-color: darken($base-color1, 10%);
                                 color: $base-color11
@@ -60,13 +85,14 @@ body {
                         }
                     }
                 }
-                
+
                 .title-text {
                     background-color: $base-color11;
 
-                    &::after{
+                    &::after {
                         background-color: $base-color11;
                     }
+
                     .title-name {
                         color: $base-color1;
                     }
@@ -75,7 +101,7 @@ body {
                         color: $base-color1;
                     }
 
-                    .cursor{
+                    .cursor {
                         background-color: $base-color1;
                     }
                 }
@@ -142,20 +168,20 @@ body {
 
             .experience-content {
                 .jobs-section {
-                    .jobs-label{
+                    .jobs-label {
                         border-bottom: solid 1px $base-color5;
                     }
 
                     .jobs-list {
                         .job-card {
-                            .text-three{
+                            .text-three {
                                 color: $base-color5;
                             }
                         }
                     }
                 }
 
-                .tools{
+                .tools {
                     background: transparent;
 
                     .tools-label {
@@ -170,7 +196,7 @@ body {
 
         }
 
-        .info-bubble{
+        .info-bubble {
             background-color: $base-color11;
         }
     }
@@ -193,7 +219,7 @@ body {
         }
     }
 
-    .info-bubble{
+    .info-bubble {
         position: absolute;
         top: 0px;
         left: -130px;
@@ -203,5 +229,15 @@ body {
         padding: 10px;
         width: max-content;
         border-radius: 8px;
+    }
+}
+
+@keyframes twinkle {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
