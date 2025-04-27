@@ -92,6 +92,74 @@
             "text": "During the Henry course, Luis was my TA, demonstrating great leadership skills, extensive knowledge in Full Stack development, excellent interpersonal skills, and always willing to lend a hand to those in need."
         }
     ],
+    "skillsNode": [
+        {
+          "id": "html",
+          "name": "HTML",
+          "position": [2, 1, -1],
+          "connections": ["javascript"]
+        },
+        {
+            "id": "css",
+            "name": "CSS",
+            "position": [4, 2, 0],
+            "connections": ["html"]
+        },
+        {
+        "id": "scss",
+        "name": "SCSS",
+        "position": [4, 3, -3],
+        "connections": ["css"]
+        },
+        {
+          "id": "javascript",
+          "name": "JavaScript",
+          "position": [0, 0, 0],
+          "connections": ["react", "typescript", "nextjs"]
+        },
+        {
+          "id": "react",
+          "name": "React",
+          "position": [-2, 2, 1],
+          "connections": ["react-native", "react-three-fiber", "nextjs"]
+        },
+        {
+            "id": "redux",
+            "name": "Redux",
+            "position": [-5, 1, 2],
+            "connections": ["react"]
+          },
+          {
+            "id": "api Rest",
+            "name": "API Rest",
+            "position": [-3, -3, 3],
+            "connections": ["react", "nextjs", "typescript"]
+          },
+        {
+          "id": "nextjs",
+          "name": "Next.js",
+          "position": [-4, -1, -1],
+          "connections": ["react"]
+        },
+        {
+          "id": "typescript",
+          "name": "TypeScript",
+          "position": [1, -2, 3],
+          "connections": ["react"]
+        },
+        {
+          "id": "react-native",
+          "name": "React Native",
+          "position": [-4, 4, 2],
+          "connections": []
+        },
+        {
+          "id": "react-three-fiber",
+          "name": "React Three Fiber",
+          "position": [-4, 3, -1],
+          "connections": []
+        }
+    ],
     "skills": {
         "subtitle": "My services",
         "title": "What I do.",
@@ -124,7 +192,7 @@
         ]
     },
     "experience": {
-        "title": "What I did.",
+        "title": "What I've done so far.",
         "subtitle": "My skills and work experiences",
         "work_experience": {
             "title": "Work experiences",
