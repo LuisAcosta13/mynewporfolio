@@ -63,33 +63,33 @@
         },
         {
             "name": "Rosibel Mendoza",
-            "rol": "FullStack Developer - SoyHenry Bootcamp",
+            "rol": "FullStack Developer",
             "text": "Respectful, responsible, perfectionist and very professional, he's always looking foward to give his best and encourages his environment to follow the leed. His skills allow him to lead a team but he also works fine following comand. He always seeks to learn new things and shares his knowledge with his peers. Definetly he's a must have in any team."
         },
         {
             "name": "Alejandro Morales",
-            "rol": "FullStack Developer - SoyHenry Bootcamp",
+            "rol": "FullStack Developer",
             "text": "He is a highly skilled and dedicated individual who maintains a high standard of work and is always willing to contribute to solving problems for his colleagues. Personally, I value his enthusiasm and creativity in the work he does."
         },
         {
             "name": "Bernardo Broscheit",
-            "rol": "FullStack Developer - SoyHenry Bootcamp",
-            "text": "I worked with Luis throughout the Henry Bootcamp, and during the course, he consistently demonstrated that he is a supportive, fun, creative, and eager learner. His curiosity, proactivity, and adaptability were also key in tackling the challenges of the final project. I have no doubt that he can excel in a professional environment and bring many additional skills to the table."
+            "rol": "FullStack Developer",
+            "text": "I worked with Luis. He consistently demonstrated that he is a supportive, fun, creative, and eager learner. His curiosity, proactivity, and adaptability were also key in tackling the challenges of the project. I have no doubt that he can excel in a professional environment and bring many additional skills to the table."
         },
         {
             "name": "Bárbara Miranda",
-            "rol": "FullStack Developer Student - SoyHenry Bootcamp",
-            "text": "I had the pleasure of going through my SoyHenry course with Luis, who was my Teaching Assistant. He was distinguished by his patience, support, positivity, and as a great web developer who always knew how to answer our questions!"
+            "rol": "Developer Student",
+            "text": "I had the pleasure of learning frontend development with Luis, who was my mentor. He was distinguished by his patience, support, positivity, and as a great web developer who always knew how to answer our questions!"
         },
         {
             "name": "José Carlos Mestre",
-            "rol": "FullStack Developer Student - SoyHenry Bootcamp",
-            "text": "We met at SoyHenry. His help as a TA was excellent. He is a great person who supported both my colleagues and me, providing emotional support as well as technical assistance."
+            "rol": "Developer Student",
+            "text": "His help as a mentor was excellent. He is a great person who supported both my colleagues and me, providing emotional support as well as technical assistance."
         },
         {
             "name": "Claudio Di Toro",
-            "rol": "FullStack Developer Student - SoyHenry Bootcamp",
-            "text": "During the Henry course, Luis was my TA, demonstrating great leadership skills, extensive knowledge in Full Stack development, excellent interpersonal skills, and always willing to lend a hand to those in need."
+            "rol": "Developer Student",
+            "text": "Luis was my mentor, demonstrating great leadership skills, extensive knowledge in Full Stack development, excellent interpersonal skills, and always willing to lend a hand to those in need."
         }
     ],
     "skillsNode": [

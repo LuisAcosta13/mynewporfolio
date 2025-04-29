@@ -63,33 +63,33 @@
         },
         {
             "name": "Rosibel Mendoza",
-            "rol": "Desarrolladora FullStack - SoyHenry Bootcamp",
+            "rol": "Desarrolladora FullStack",
             "text": "Respetuoso, responsable, perfeccionista y muy profesional, siempre busca dar lo mejor de sí y fomenta a su entorno para seguir su ejemplo. Sus habilidades le permiten liderar un equipo, pero también trabaja bien siguiendo instrucciones. Siempre busca aprender cosas nuevas y comparte sus conocimientos con sus compañeros. Definitivamente, es una persona indispensable en cualquier equipo."
         },
         {
             "name": "Alejandro Morales",
-            "rol": "Desarrollador FullStack - SoyHenry Bootcamp",
+            "rol": "Desarrollador FullStack",
             "text": "Es una persona altamente capacitada y dedicada que mantiene un alto estándar de trabajo y siempre está dispuesta a contribuir a la solución de problemas para sus compañeros. Personalmente, valoro su entusiasmo y creatividad en el trabajo que realiza."
         },
         {
             "name": "Bernardo Broscheit",
-            "rol": "Desarrollador FullStack - SoyHenry Bootcamp",
-            "text": "Trabajé con Luis durante todo el Bootcamp de Henry, y durante el curso, demostró constantemente que es una persona de apoyo, divertida, creativa y con muchas ganas de aprender. Su curiosidad, proactividad y adaptabilidad también fueron claves para enfrentar los desafíos del proyecto final. No tengo dudas de que puede sobresalir en un entorno profesional y aportar muchas habilidades adicionales."
+            "rol": "Desarrollador FullStack",
+            "text": "Trabajé con Luis, quien demostró constantemente que es una persona de apoyo, divertida, creativa y con muchas ganas de aprender. Su curiosidad, proactividad y adaptabilidad también fueron claves para enfrentar los desafíos del proyecto. No tengo dudas de que puede sobresalir en un entorno profesional y aportar muchas habilidades adicionales."
         },
         {
             "name": "Bárbara Miranda",
-            "rol": "Estudiante Desarrolladora FullStack - SoyHenry Bootcamp",
-            "text": "Tuve el placer de hacer el curso de SoyHenry con Luis, quien fue mi Teaching Assistant. Se destacó por su paciencia, apoyo, positividad y como gran desarrollador web que siempre supo responder nuestras preguntas."
+            "rol": "Desarrollador Estudiante",
+            "text": "Tuve el placer de aprender desarrollo frontend con Luis, quien fue mi mentor. Se destacó por su paciencia, apoyo, positividad y como gran desarrollador web que siempre supo responder nuestras preguntas."
         },
         {
             "name": "José Carlos Mestre",
-            "rol": "Estudiante Desarrollador FullStack - SoyHenry Bootcamp",
-            "text": "Nos conocimos en SoyHenry. Su ayuda como TA fue excelente. Es una gran persona que apoyó tanto a mis compañeros como a mí, brindándonos apoyo emocional además de asistencia técnica."
+            "rol": "Desarrollador Estudiante",
+            "text": "Su ayuda como mentor fue excelente. Es una gran persona que apoyó tanto a mis compañeros como a mí, brindándonos apoyo emocional además de asistencia técnica."
         },
         {
             "name": "Claudio Di Toro",
-            "rol": "Estudiante Desarrollador FullStack - SoyHenry Bootcamp",
-            "text": "Durante el curso de Henry, Luis fue mi TA, demostrando grandes habilidades de liderazgo, conocimientos extensos en desarrollo Full Stack, excelentes habilidades interpersonales y siempre dispuesto a echar una mano a quienes lo necesitaban."
+            "rol": "Desarrollador Estudiante",
+            "text": "Luis fue mi mentor, demostrando grandes habilidades de liderazgo, conocimientos extensos en desarrollo Full Stack, excelentes habilidades interpersonales y siempre dispuesto a echar una mano a quienes lo necesitaban."
         }
     ],
     "skillsNode": [
@@ -210,14 +210,14 @@
                     "date": "2023 - 2024"
                 },
                 {
-                    "company": "Soy Henry",
-                    "position": "Asistente de enseñanza Fullstack",
+                    "company": "Car Cheking",
+                    "position": "Desarrollador Frontend",
                     "location": "Argentina",
                     "date": "2022 - 2023"
                 },
                 {
                     "company": "Ejercito Argentino",
-                    "position": "Asistente IT",
+                    "position": "Desarrollador Frontend",
                     "location": "Argentina",
                     "date": "2019 - 2023"
                 }
