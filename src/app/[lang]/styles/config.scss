@@ -346,6 +346,28 @@ body {
         .info-bubble {
             background-color: $base-color11;
         }
+
+        .slider-container {
+            .card .card-content {
+                .quote-icon {
+                    color: $base-color5;
+                }
+
+                .padding {
+                    .header .title {
+                        color: $base-color5;
+                    }
+
+                    .header .subtitle {
+                        color: $base-color1;
+                    }
+
+                    .recommendation-text {
+                        color: $base-color1;
+                    }
+                }
+            }
+        }
     }
 
     ul {

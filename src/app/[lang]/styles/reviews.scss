@@ -91,11 +91,16 @@
                     top: 25px;
                     right: 25px;
                     font-size: 45px;
-                    color: rgba(140, 0, 255, 0.15);
-                    /* Subtly tinted Violet */
+                    color: $base-color4;
                     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
                     pointer-events: none;
                     z-index: 2;
+
+                    &:hover {
+                        color: $base-color4;
+                        transform: scale(1.1) rotate(-10deg);
+                        
+                    }
                 }
 
                 .padding {
@@ -201,34 +206,6 @@
 
                     &.slick-active button::before {
                         color: $base-color4;
-                    }
-                }
-
-                .slick-slide .card {
-                    .header .title {
-                        color: $base-color5;
-                        font-size: 26px;
-                    }
-
-                    .header .subtitle {
-                        color: #555;
-                    }
-
-                    .recommendation-text {
-                        color: #555;
-                        /* Blue + Grey text for Light Mode as requested */
-                        font-weight: 500;
-                    }
-
-                    .quote-icon {
-                        color: rgba(0, 102, 255, 0.1);
-                    }
-
-                    &:hover {
-                        .quote-icon {
-                            color: $base-color4;
-                            transform: scale(1.1) rotate(-10deg);
-                        }
                     }
                 }
             }
