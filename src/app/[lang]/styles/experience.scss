@@ -1,44 +1,83 @@
 @import "config.scss";
 
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, 10px);
+    }
+
+    20% {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+
+    80% {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+
+    100% {
+        opacity: 0.7;
+        transform: translate(-50%, 0);
+    }
+}
+
 .experience {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 110px 0px 50px;
-    padding: 50px 0 0;
-    background-color: $base-color10;
-    box-shadow: 0px 5px 5px 5px rgba(0, 0, 0, 0.15);
-    backdrop-filter: blur(10px);
--webkit-backdrop-filter: blur(10px);
+    margin: 100px auto;
+    padding: 80px 40px;
+    max-width: 1200px;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 40px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+    &.reveal {
+        opacity: 1;
+        transform: translateY(0);
+    }
 
     .experience_title {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin: 0 0 100px;
+        margin-bottom: 80px;
         text-align: center;
 
         .subtitle {
             color: $base-color4;
-            font-weight: bold;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
         }
 
         .title {
             position: relative;
-            font-size: 50px;
-            margin-top: 20px;
-            font-weight: bold;
+            font-size: 52px;
+            font-weight: 800;
+            color: $base-color8;
+            letter-spacing: -2px;
 
             &::after {
                 content: "";
                 position: absolute;
-                top: 150%;
-                right: 25%;
-                width: 50%;
-                height: 2px;
-                background-color: $base-color4;
+                bottom: -15px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 60px;
+                height: 4px;
+                background: $base-color4;
+                border-radius: 2px;
             }
         }
     }
@@ -46,95 +85,169 @@
     .experience-content {
         display: flex;
         flex-direction: row;
-        //justify-content: space-evenly;
         align-items: stretch;
         width: 100%;
-        flex-wrap: wrap;
+        gap: 40px;
+        position: relative;
+
+        .tools {
+            flex: 1.4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 550px;
+            height: auto;
+
+            .model-instructions {
+                position: absolute;
+                bottom: 30px;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 10;
+                background: rgba(255, 255, 255, 0.15);
+                backdrop-filter: blur(8px);
+                padding: 10px 20px;
+                border-radius: 30px;
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                color: $base-color8;
+                font-size: 0.85rem;
+                font-weight: 500;
+                pointer-events: none;
+                white-space: nowrap;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+                opacity: 0;
+                animation: fadeInOut 4s ease-in-out infinite alternate;
+
+                span {
+                    opacity: 0.8;
+                }
+            }
+
+            .SkillsMap {
+                position: sticky !important;
+                top: 100px;
+                height: 80vh !important;
+                width: 100% !important;
+            }
+        }
 
         .jobs-section {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            margin-left: 50px;
-            justify-content: center;
+            flex: 1;
+            position: relative;
+            padding-left: 40px;
+            border-left: 1px solid rgba(255, 255, 255, 0.1);
 
-            .jobs-label {
-                border-bottom: solid 1px $base-color4;
-                padding-bottom: 25px;
-                margin-bottom: 25px;
-                font-size: 25px;
-                font-weight: bold;
+            .timeline-line {
+                position: absolute;
+                left: 10px;
+                top: 10px;
+                bottom: 10px;
+                width: 2px;
+                background: linear-gradient(180deg, $base-color4 0%, transparent 100%);
+                opacity: 0.3;
             }
 
             .jobs-list {
-                margin-bottom: 50px;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
 
                 .job-card {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: flex-start;
-                    gap: 10px;
-                    margin: 20px 0;
+                    position: relative;
+                    opacity: 0;
+                    transform: translateX(30px);
+                    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 
-                    .text-one {
-                        font-size: 18px;
+                    &.reveal {
+                        opacity: 1;
+                        transform: translateX(0);
                     }
 
-                    .text-two {
-                        font-size: 22px;
-                        font-weight: bold;
+                    @for $i from 1 through 10 {
+                        &:nth-child(#{$i}) {
+                            transition-delay: #{$i * 0.15}s;
+                        }
                     }
 
-                    .text-three {
-                        font-size: 18px;
-                        color: $base-color4;
+                    .job-dot {
+                        position: absolute;
+                        left: -35px;
+                        top: 25px;
+                        width: 12px;
+                        height: 12px;
+                        background-color: $base-color4;
+                        border: 3px solid white;
+                        border-radius: 50%;
+                        z-index: 2;
+                        box-shadow: 0 0 10px rgba(0, 36, 136, 0.3);
+                    }
+
+                    .job-card-content {
+                        background: rgba(255, 255, 255, 0.6);
+                        padding: 25px;
+                        border-radius: 20px;
+                        border: 1px solid rgba(255, 255, 255, 0.5);
+                        transition: all 0.4s ease;
+                        cursor: default;
+
+                        &:hover {
+                            transform: translateY(-5px) scale(1.02);
+                            background: rgba(255, 255, 255, 0.95);
+                            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+                            border-color: $base-color4;
+                        }
+
+                        .job-date {
+                            font-size: 0.9rem;
+                            font-weight: 600;
+                            color: #666;
+                            display: block;
+                            margin-bottom: 5px;
+                        }
+
+                        .job-position {
+                            font-size: 1.4rem;
+                            font-weight: 800;
+                            color: $base-color4;
+                            margin: 0 0 5px;
+                            line-height: 1.2;
+                        }
+
+                        .job-company {
+                            font-size: 1.1rem;
+                            font-weight: 600;
+                            color: #444;
+                        }
                     }
                 }
             }
         }
+    }
+}
 
-        .tools {
-            display: flex;
+@media (max-width: 1024px) {
+    .experience {
+        padding: 60px 20px;
+        margin: 50px auto;
+
+        .experience-content {
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            width: 60%;
-            //background: linear-gradient(0deg, rgba(227, 227, 236, 0.811) 30%, rgba(247, 247, 247, 0) 100%);
+            gap: 20px;
 
-            border-radius: 8px;
-
-            .tools-label {
-                border-bottom: solid 1px $base-color4;
-                padding-bottom: 25px;
-                font-size: 25px;
-                font-weight: bold;
-                margin: 0px 50px 20px;
-            }
-
-            .progress-bar-container {
-                background-color: $base-color1;
-                border-radius: 20px;
-                overflow: hidden;
+            .tools {
                 width: 100%;
-                height: 5px;
-                margin: 15px 0;
+                min-height: 300px;
+                order: 2;
             }
 
-            .progress-bar {
-                background-color: $base-color4;
-                height: 100%;
-                width: 0%;
-            }
-
-            .progress-bar-item h3 {
-                margin: 0;
-                font-size: 18px;
-            }
-
-            .progress-bar-list {
+            .jobs-section {
                 width: 100%;
-                max-width: 500px;
-                margin: 0;
+                padding-left: 30px;
+                margin-left: 0;
+                order: 1;
             }
         }
     }
@@ -142,52 +255,37 @@
 
 @media (max-width: 600px) {
     .experience {
+        border-radius: 0;
 
-        .experience_title{
-            margin-left: 20px;
-            margin-right: 20px;
+        .experience_title {
+            margin-bottom: 40px;
+
+            .title {
+                font-size: 38px;
+            }
         }
 
+
         .experience-content {
-            gap: 0px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
             .jobs-section {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                margin: 0 20px;
+                padding-left: 20px;
 
-                .jobs-label {
-                    text-align: center;
+                .timeline-line {
+                    left: 0;
                 }
 
-                .jobs-list {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    text-align: center;
-
-                    .job-card {
-                        width: 100%;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
+                .jobs-list .job-card {
+                    .job-dot {
+                        left: -25px;
                     }
-                }
-            }
 
-            .tools {
-                width: 100%;
+                    .job-card-content {
+                        padding: 20px;
 
-                .tools-label {
-                    text-align: center;
+                        .job-position {
+                            font-size: 1.2rem;
+                        }
+                    }
                 }
             }
         }

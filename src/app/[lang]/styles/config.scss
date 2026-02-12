@@ -173,6 +173,9 @@ body {
         }
 
         .experience {
+            background-color: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
 
             .experience_title {
                 .subtitle {
@@ -180,6 +183,8 @@ body {
                 }
 
                 .title {
+                    color: $base-color1;
+
                     &::after {
                         background-color: $base-color5;
                     }
@@ -188,14 +193,37 @@ body {
 
             .experience-content {
                 .jobs-section {
-                    .jobs-label {
-                        border-bottom: solid 1px $base-color5;
+                    .timeline-line {
+                        background: linear-gradient(180deg, $base-color5 0%, transparent 100%);
                     }
 
-                    .jobs-list {
-                        .job-card {
-                            .text-three {
+                    .jobs-list .job-card {
+                        .job-dot {
+                            background-color: $base-color5;
+                            border-color: #1a1a1a;
+                            box-shadow: 0 0 10px rgba(140, 0, 255, 0.3);
+                        }
+
+                        .job-card-content {
+                            background: rgba(39, 39, 39, 0.6);
+                            border-color: rgba(255, 255, 255, 0.05);
+
+                            &:hover {
+                                background: rgba(39, 39, 39, 0.95);
+                                border-color: $base-color5;
+                                box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+                            }
+
+                            .job-date {
+                                color: #999;
+                            }
+
+                            .job-position {
                                 color: $base-color5;
+                            }
+
+                            .job-company {
+                                color: #eee;
                             }
                         }
                     }
@@ -208,12 +236,17 @@ body {
                         border-bottom: solid 1px $base-color5;
                     }
 
+                    .model-instructions {
+                        background: rgba(0, 0, 0, 0.5);
+                        border-color: rgba(255, 255, 255, 0.1);
+                        color: #ccc;
+                    }
+
                     .progress-bar {
                         background-color: $base-color5;
                     }
                 }
             }
-
         }
 
         .info-bubble {

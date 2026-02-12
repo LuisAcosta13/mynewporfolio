@@ -262,6 +262,7 @@
     "experience": {
         "title": "Lo que hice.",
         "subtitle": "Mis habilidades y experiencias",
+        "interactive_instructions": "Interactúa con la constelación: Arrastra para rotar • Haz hover en los nodos • Scroll para zoom",
         "work_experience": {
             "title": "Experiencia laboral",
             "jobs": [

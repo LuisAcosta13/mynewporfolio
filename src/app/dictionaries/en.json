@@ -262,6 +262,7 @@
     "experience": {
         "title": "What I've done so far.",
         "subtitle": "My skills and work experiences",
+        "interactive_instructions": "Interact with the constellation: Drag to rotate • Hover over nodes • Scroll to zoom",
         "work_experience": {
             "title": "Work experiences",
             "jobs": [
