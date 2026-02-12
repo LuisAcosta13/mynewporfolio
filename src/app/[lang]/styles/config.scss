@@ -119,13 +119,22 @@ body {
             }
 
             .about-content {
+                background-color: rgba(0, 0, 0, 0.3);
+                border: 1px solid rgba(255, 255, 255, 0.05);
+                box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+
                 .about-title {
                     color: $base-color5;
+                }
+
+                .about-text {
+                    color: #ccc;
                 }
 
                 .image-container {
                     &:before {
                         background-color: $base-color5;
+                        opacity: 0.2;
                     }
                 }
             }

@@ -49,7 +49,7 @@
         "theme": "Change theme",
         "language": "Change language"
     },
-    "about": "<p>I'm a Frontend Software Engineer working from Argentina.</p> <p>I'm an experienced, responsible and resorceful person with great leadership and empathy skills, teamwork, problem solving, creativity and a great desire to learn and guide others.</p> <p>I studied as a Full Stack developer at Henry's bootcamp, perfecting my Front-End and Back-End bases, acquiring knowledge in React.js, Redux, Node.js, Express.js, PostgreSQL and Sequelize, and adding an excellent use of Javascript, with its libraries and frameworks.</p> <p>My latest experience as a Frontend Dev allowed me to participate in projects for american and french enterprises using my Javascript and SASS knowledge, integrating my work with backend and design team.</p>",
+    "about": "<p>I am a Senior Frontend Engineer specialized in React, Next.js, and TypeScript, based in Argentina.</p><p>With a strong background in frontend architecture and product-driven development, I focus on owning feature lifecycles end-to-end. Recently, as a Senior Frontend Engineer at Le Comptoir Digital (France), I have led technical decisions for scalable web applications, always prioritizing UX quality and performance.</p><p>My career includes strategic collaborations with designers and backend teams for major global brands, bringing a vision that balances technical excellence with direct business impact.</p>",
     "recommendations": [
         {
             "name": "Gabriele Capocelli",
