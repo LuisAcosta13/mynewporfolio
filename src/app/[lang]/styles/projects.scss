@@ -73,23 +73,30 @@
             }
         }
 
-        &:hover {
-            transform: translateY(-12px) scale(1.02);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
-            background-color: white;
-
-            .project_image .image_placeholder {
-                background-color: $base-color4;
-                color: white;
-                transform: scale(1.1);
-            }
-        }
-
         .project_image {
-            height: 200px;
+            height: 220px;
             width: 100%;
             position: relative;
             background-color: #ddd;
+            overflow: hidden;
+
+            .project_img {
+                object-fit: cover;
+                object-position: top;
+                transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
+                opacity: 1;
+                transition: opacity 0.3s ease;
+            }
 
             .image_placeholder {
                 width: 100%;
@@ -140,6 +147,28 @@
                 }
             }
         }
+
+        &:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            background-color: white;
+
+            .project_image {
+                .project_img {
+                    transform: scale(1.1);
+                }
+
+                &::after {
+                    opacity: 0.6;
+                }
+
+                .image_placeholder {
+                    background-color: $base-color4;
+                    color: white;
+                    transform: scale(1.1);
+                }
+            }
+        }
     }
 }
 
@@ -179,17 +208,29 @@ body.dark {
                 }
             }
 
-            .project_image .image_placeholder {
-                background-color: #1a1a1a;
-                color: $base-color5;
+            .project_image {
+                .project_img {
+                    filter: brightness(0.8) contrast(1.2);
+                }
+
+                .image_placeholder {
+                    background-color: #1a1a1a;
+                    color: $base-color5;
+                }
             }
 
             &:hover {
                 background-color: rgba(39, 39, 39, 0.95);
 
-                .project_image .image_placeholder {
-                    background-color: $base-color5;
-                    color: white;
+                .project_image {
+                    .project_img {
+                        filter: brightness(1) contrast(1);
+                    }
+
+                    .image_placeholder {
+                        background-color: $base-color5;
+                        color: white;
+                    }
                 }
             }
         }

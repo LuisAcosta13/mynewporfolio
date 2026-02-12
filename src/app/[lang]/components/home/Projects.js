@@ -13,18 +13,27 @@ export default function Projects({ projects }) {
             </div>
             <div className="projects_grid">
                 {projects.list.map((project, index) => (
-                    <a 
-                        key={index} 
-                        href={project.link} 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
+                    <a
+                        key={index}
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="project_card"
                     >
                         <div className="project_image">
-                            {/* Using a placeholder style if images don't exist yet */}
-                            <div className="image_placeholder">
-                                <span>{project.title}</span>
-                            </div>
+                            {project.image ? (
+                                <Image
+                                    src={project.image}
+                                    alt={project.title}
+                                    fill
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                    className="project_img"
+                                />
+                            ) : (
+                                <div className="image_placeholder">
+                                    <span>{project.title}</span>
+                                </div>
+                            )}
                         </div>
                         <div className="project_info">
                             <h3 className="project_name">{project.title}</h3>
