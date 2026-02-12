@@ -1,12 +1,30 @@
-"use client";
-
-import React from "react";
+"use client"
+import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import "@/app/[lang]/styles/projects.scss";
 
 export default function Projects({ projects }) {
+    const containerRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        if (containerRef.current) {
+            const cards = containerRef.current.querySelectorAll('.project_card');
+            cards.forEach(card => observer.observe(card));
+        }
+
+        return () => observer.disconnect();
+    }, []);
+
     return (
-        <div className="projects">
+        <div ref={containerRef} className="projects">
             <div className="projects_title">
                 <span className="subtitle">{projects.subtitle}</span>
                 <span className="title">{projects.title}</span>

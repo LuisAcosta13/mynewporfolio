@@ -4,7 +4,8 @@ import React, { Component } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "../../styles/reviews.scss"
+import { FaQuoteLeft } from "react-icons/fa";
+import "../../styles/reviews.scss";
 
 function Reviews({ recommendations }) {
   const settings = {
@@ -13,12 +14,12 @@ function Reviews({ recommendations }) {
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
-    speed: 100,
+    speed: 800,
     dots: true,
     arrows: false,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 5000,
-    cssEase: "linear",
+    cssEase: "ease-out",
     pauseOnHover: true,
     responsive: [
       {
@@ -35,21 +36,28 @@ function Reviews({ recommendations }) {
 
   return (
     <div className="slider-container">
-      <div className="blur-left"></div>
+      <div className="background-blobs">
+        <div className="blob blob-1"></div>
+        <div className="blob blob-2"></div>
+      </div>
       <Slider {...settings}>
-        {Object.values(recommendations).map((obj, index) =>
+        {Object.values(recommendations).map((obj, index) => (
           <div className="card" key={index}>
-            <div className="padding">
-              <div className="header">
-                <span className="header title">{obj.name}</span>
-                <span className="header subtitle">{obj.rol}</span>
+            <div className="card-content">
+              <div className="quote-icon">
+                <FaQuoteLeft />
               </div>
-              <p>{obj.text}</p>
+              <div className="padding">
+                <div className="header">
+                  <span className="header title">{obj.name}</span>
+                  <span className="header subtitle">{obj.rol}</span>
+                </div>
+                <p className="recommendation-text">{obj.text}</p>
+              </div>
             </div>
           </div>
-        )}
+        ))}
       </Slider>
-      <div className="blur-right"></div>
     </div>
   );
 }
