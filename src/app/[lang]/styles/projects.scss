@@ -177,18 +177,57 @@
 
 body.dark {
     .projects {
-        background-color: rgba(0, 0, 0, 0.2);
+        background-color: rgba(0, 0, 0, 0.3);
+        border-color: rgba(255, 255, 255, 0.05);
 
         .projects_title {
             .subtitle {
                 color: $base-color5;
             }
 
-            .title::after {
-                background-color: $base-color5;
+            .title {
+                color: $base-color1;
+
+                &::after {
+                    background-color: $base-color5;
+                }
             }
         }
 
+        .project_card {
+            .project_image {
+                background-color: #222;
+
+                .image_placeholder {
+                    background-color: #1a1a1a;
+                    color: $base-color5;
+                }
+            }
+
+            .project_info {
+                .project_name {
+                    color: $base-color5;
+                }
+
+                .project_description {
+                    color: #bbb;
+                }
+
+                .project_tags {
+                    .tag {
+                        background-color: rgba(140, 0, 255, 0.1);
+                        color: $base-color5;
+                    }
+                }
+            }
+
+            &:hover {
+                .project_image .image_placeholder {
+                    background-color: $base-color5;
+                    color: white;
+                }
+            }
+        }
     }
 }
 
