@@ -27,7 +27,7 @@ function Reviews({ recommendations }) {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          infinite: false,
+          infinite: true,
           dots: true,
         }
       },
