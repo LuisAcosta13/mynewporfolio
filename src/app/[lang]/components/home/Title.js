@@ -3,14 +3,21 @@
 import LittleRobotCanvas from "./3d_model/LittleRobotCanvas"
 import { useEffect, useState, useRef } from "react";
 
-export default function Title({ dictionary, speed = 60 }) {
+export default function Title({ dictionary, speed = 60, lang }) {
   const [displayedText, setDisplayedText] = useState("");
   const [shouldDisplayButtons, setShouldDisplayButtons] = useState(false);
   const [isThinking, setIsThinking] = useState(false); // Estado para controlar el texto que se está escribiendo
   const indexRef = useRef(0);
   const textRef = useRef(""); // este acumula el texto real
   const responseRef = useRef(null);
-  const [questions, setQuestions] = useState(dictionary.responses);
+  const [questions, setQuestions] = useState([
+    ...dictionary.responses,
+    {
+      question: lang === "es" ? "¿Qué proyectos has realizado?" : "What projects have you built?",
+      answer: lang === "es" ? "¡He trabajado en varios proyectos emocionantes! He añadido una sección de Proyectos justo debajo para que puedas explorarlos. 🚀" : "I've worked on several exciting projects! I've added a Projects section just below for you to explore. 🚀",
+      scrollTo: "projects"
+    }
+  ]);
 
   const writeText = (text) => {
     setShouldDisplayButtons(false);
@@ -32,8 +39,16 @@ export default function Title({ dictionary, speed = 60 }) {
         setTimeout(() => {
           if (responseRef.current?.link) {
             window.open(responseRef.current.link, "_blank");
-            responseRef.current = null; // Limpia después de usar
           }
+
+          if (responseRef.current?.scrollTo) {
+            const element = document.querySelector(`.${responseRef.current.scrollTo}`);
+            if (element) {
+              element.scrollIntoView({ behavior: "smooth" });
+            }
+          }
+
+          responseRef.current = null; // Limpia después de usar
         }, 1000)
       }
     }, speed);
@@ -62,7 +77,7 @@ export default function Title({ dictionary, speed = 60 }) {
 
   return (
     <div className="title-content">
-      <LittleRobotCanvas isThinking={isThinking}/>
+      <LittleRobotCanvas isThinking={isThinking} />
       <div className="chatbot-ui">
         <div className="title-text">
           <div className="title-name">

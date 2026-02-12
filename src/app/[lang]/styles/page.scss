@@ -16,70 +16,88 @@
         background-repeat: no-repeat;
         width: 200px;
         height: 120px;
-        opacity: 0.5;
+        opacity: 0.4;
+        filter: blur(1px);
         animation: moveClouds linear infinite;
+        pointer-events: none;
     }
 
     .cloud1 {
-        top: 20%;
+        top: 15%;
         left: -200px;
-        animation-duration: 60s;
-        animation-delay: 0s;
-      }
-      
-      .cloud2 {
-        top: 40%;
+        animation-duration: 45s;
+        opacity: 0.3;
+        z-index: -2;
+    }
+
+    .cloud2 {
+        top: 35%;
         left: -300px;
         width: 350px;
         height: 190px;
-        animation-duration: 80s;
+        animation-duration: 65s;
         animation-delay: 20s;
-      }
-      
-      .cloud3 {
-        top: 60%;
+        opacity: 0.5;
+        filter: blur(0);
+        z-index: -1;
+    }
+
+    .cloud3 {
+        top: 55%;
         left: -400px;
         width: 550px;
         height: 250px;
-        animation-duration: 100s;
+        animation-duration: 90s;
         animation-delay: 40s;
-      }
-      
-      .cloud4 {
-        top: 30%;
+        opacity: 0.6;
+        filter: blur(2px);
+        z-index: -3;
+    }
+
+    .cloud4 {
+        top: 25%;
         left: -500px;
         width: 180px;
         height: 110px;
-        animation-duration: 70s;
+        animation-duration: 55s;
         animation-delay: 10s;
-      }
-      
-      .cloud5 {
-        top: 10%;
+        opacity: 0.3;
+        z-index: -2;
+    }
+
+    .cloud5 {
+        top: 8%;
         left: -600px;
         width: 630px;
         height: 200px;
-        animation-duration: 90s;
+        animation-duration: 80s;
         animation-delay: 30s;
-      }
-      
-      .cloud6 {
-        top: 50%;
+        opacity: 0.4;
+        filter: blur(1px);
+        z-index: -3;
+    }
+
+    .cloud6 {
+        top: 45%;
         left: -700px;
         width: 220px;
         height: 140px;
-        animation-duration: 75s;
+        animation-duration: 60s;
         animation-delay: 15s;
-      }
-      
-      .cloud7 {
-        top: 70%;
+        opacity: 0.5;
+        z-index: -1;
+    }
+
+    .cloud7 {
+        top: 65%;
         left: -800px;
         width: 170px;
         height: 100px;
-        animation-duration: 85s;
+        animation-duration: 75s;
         animation-delay: 35s;
-      }
+        opacity: 0.3;
+        z-index: -2;
+    }
 }
 
 
@@ -109,25 +127,35 @@
                 align-self: flex-start;
                 position: relative;
                 font-family: serif;
-                background-color: $base-color1;
+                background-color: rgba(232, 232, 232, 0.85);
+                backdrop-filter: blur(10px);
                 padding: 40px;
+                border: 1px solid rgba(255, 255, 255, 0.3);
                 border-radius: 16px;
-                box-shadow: 0px 5px 5px 5px rgba(0, 0, 0, 0.15);
+                box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15);
                 max-width: 100%;
                 word-break: break-word;
-                transition: background-color 0.3s;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    background-color: rgba(232, 232, 232, 0.95);
+                    transform: translateY(-5px);
+
+                    &::after {
+                        background-color: rgba(232, 232, 232, 0.95);
+                    }
+                }
 
                 &::after {
                     content: "";
                     position: absolute;
-                    top: 20px;
-                    left: -9px;
-                    width: 20px;
+                    top: 40px;
+                    left: -15px;
+                    width: 15px;
                     height: 20px;
-                    background-color: $base-color1;
-                    border-radius: 20%;
-                    transform: rotate(45deg);
-                    transition: background-color 0.3s;
+                    background-color: rgba(232, 232, 232, 0.85);
+                    clip-path: polygon(100% 0, 0 50%, 100% 100%);
+                    transition: all 0.3s ease;
                 }
 
                 .title-name {
@@ -165,20 +193,23 @@
                 width: 100%;
 
                 button {
-                    background-color: $base-color1;
+                    background-color: rgba(232, 232, 232, 0.85);
+                    backdrop-filter: blur(5px);
                     color: $base-color4;
                     border: solid 1px $base-color4;
-                    padding: 10px 20px;
-                    border-radius: 8px;
-                    font-size: 20px;
+                    padding: 12px 24px;
+                    border-radius: 30px;
+                    font-size: 18px;
                     font-weight: 500;
                     cursor: pointer;
-                    transition: background-color 0.3s;
-                    box-shadow: 3px 3px 2px 3px rgba(0, 0, 0, 0.15);
+                    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 
                     &:hover {
-                        background-color: darken($base-color4, 10%);
-                        color: $base-color1
+                        background-color: $base-color4;
+                        color: $base-color1;
+                        transform: scale(1.05);
+                        box-shadow: 0 8px 25px rgba(0, 36, 136, 0.3);
                     }
                 }
             }
@@ -290,28 +321,43 @@
 
             .chatbot-ui {
                 padding: 10px;
+                width: 100%;
 
                 .title-text {
                     margin: 0;
-                    text-align: center;
+                    text-align: left;
                     display: flex;
-                    align-items: center;
-                    padding: 20px;
+                    align-items: flex-start;
+                    padding: 25px;
+                    border-radius: 20px;
 
                     .title-name {
-                        font-size: 20px;
+                        font-size: 1.2rem;
+                        line-height: 1.4;
                     }
 
                     &::after {
-                        display: none;
+                        display: block;
+                        top: -15px;
+                        bottom: auto;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 20px;
+                        height: 15px;
+                        clip-path: polygon(50% 0, 0 100%, 100% 100%);
                     }
                 }
 
                 .chatbot-options {
+                    margin-top: 30px;
+                    gap: 12px;
+
                     button {
                         width: 100%;
-                        padding: 10px;
+                        padding: 14px;
                         font-size: 16px;
+                        border-radius: 12px;
+                        text-align: left;
                     }
                 }
             }
@@ -336,15 +382,17 @@
 
 @keyframes blink-caret {
     50% {
-        background-color: transparent;
+        opacity: 0;
     }
 }
 
 @keyframes moveClouds {
     0% {
-      transform: translateX(0);
+        transform: translateX(0);
     }
+
     100% {
-      transform: translateX(400vw); /* Antes 200vw */
+        transform: translateX(400vw);
+        /* Antes 200vw */
     }
-  }
+}

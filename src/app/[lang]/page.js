@@ -6,6 +6,8 @@ import "./styles/page.scss"
 import Skills from "./components/home/Skills.js";
 import Experience from "./components/home/Experience.js";
 import SkyBackground from "./components/SkyBackground.js";
+import About from "./components/home/About.js";
+import Projects from "./components/home/Projects.js";
 
 export default async function IndexPage({ params: { lang } }) {
   const dictionary = await getDictionary(lang);
@@ -15,10 +17,11 @@ export default async function IndexPage({ params: { lang } }) {
       <SkyBackground />
       <Menu lang={lang} dictionary={dictionary} />
       <div className="main-content">
-        <Title dictionary={dictionary} />
-        {/* <About dictionary={dictionary} /> */}
+        <Title dictionary={dictionary} lang={lang} />
+        <About dictionary={dictionary} />
         <Skills skills={dictionary.skills} />
         <Experience experience={dictionary.experience} skills={dictionary.skillsNode} />
+        <Projects projects={dictionary.projects} />
         <Reviews recommendations={dictionary.recommendations} />
       </div>
     </div>

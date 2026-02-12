@@ -1,0 +1,226 @@
+@import "config.scss";
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 110px 0px 50px;
+    padding: 80px 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+
+    .projects_title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 0 80px;
+        text-align: center;
+
+        .subtitle {
+            color: $base-color4;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .title {
+            position: relative;
+            font-size: 50px;
+            margin-top: 20px;
+            font-weight: bold;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 150%;
+                right: 25%;
+                width: 50%;
+                height: 2px;
+                background-color: $base-color4;
+            }
+        }
+    }
+
+    .projects_grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        width: 100%;
+        max-width: 1200px;
+    }
+
+    .project_card {
+        background-color: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        text-decoration: none;
+        color: inherit;
+        display: flex;
+        flex-direction: column;
+        animation: fadeIn 0.8s ease forwards;
+        opacity: 0;
+
+        @for $i from 1 through 10 {
+            &:nth-child(#{$i}) {
+                animation-delay: #{$i * 0.1}s;
+            }
+        }
+
+        &:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            background-color: white;
+
+            .project_image .image_placeholder {
+                background-color: $base-color4;
+                color: white;
+                transform: scale(1.1);
+            }
+        }
+
+        .project_image {
+            height: 200px;
+            width: 100%;
+            position: relative;
+            background-color: #ddd;
+
+            .image_placeholder {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: bold;
+                font-size: 1.5rem;
+                background-color: #f0f0f0;
+                transition: all 0.3s ease;
+                color: $base-color4;
+            }
+        }
+
+        .project_info {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+
+            .project_name {
+                font-size: 1.5rem;
+                margin-bottom: 10px;
+                color: $base-color4;
+            }
+
+            .project_description {
+                font-size: 0.95rem;
+                line-height: 1.5;
+                color: #555;
+                margin-bottom: 20px;
+                flex-grow: 1;
+            }
+
+            .project_tags {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+
+                .tag {
+                    background-color: rgba(0, 36, 136, 0.1);
+                    color: $base-color4;
+                    padding: 4px 10px;
+                    border-radius: 20px;
+                    font-size: 0.75rem;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
+
+body.dark {
+    .projects {
+        background-color: rgba(0, 0, 0, 0.2);
+
+        .projects_title {
+            .subtitle {
+                color: $base-color5;
+            }
+
+            .title::after {
+                background-color: $base-color5;
+            }
+        }
+
+        .project_card {
+            background-color: rgba(39, 39, 39, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            color: $base-color1;
+
+            .project_info {
+                .project_name {
+                    color: $base-color5;
+                }
+
+                .project_description {
+                    color: #bbb;
+                }
+
+                .tag {
+                    background-color: rgba(140, 0, 255, 0.15);
+                    border: 1px solid rgba(140, 0, 255, 0.3);
+                    color: $base-color5;
+                }
+            }
+
+            .project_image .image_placeholder {
+                background-color: #1a1a1a;
+                color: $base-color5;
+            }
+
+            &:hover {
+                background-color: rgba(39, 39, 39, 0.95);
+
+                .project_image .image_placeholder {
+                    background-color: $base-color5;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .projects {
+        margin-top: 50px;
+        padding: 60px 20px;
+        border-radius: 0;
+
+        .projects_title .title {
+            font-size: 35px;
+        }
+
+        .projects_grid {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+    }
+}

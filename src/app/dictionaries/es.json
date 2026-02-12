@@ -94,70 +94,138 @@
     ],
     "skillsNode": [
         {
-          "id": "html",
-          "name": "HTML",
-          "position": [2, 1, -1],
-          "connections": ["javascript"]
+            "id": "html",
+            "name": "HTML",
+            "position": [
+                2,
+                1,
+                -1
+            ],
+            "connections": [
+                "javascript"
+            ]
         },
         {
             "id": "css",
             "name": "CSS",
-            "position": [4, 2, 0],
-            "connections": ["html"]
+            "position": [
+                4,
+                2,
+                0
+            ],
+            "connections": [
+                "html"
+            ]
         },
         {
-        "id": "scss",
-        "name": "SCSS",
-        "position": [4, 3, -3],
-        "connections": ["css"]
+            "id": "scss",
+            "name": "SCSS",
+            "position": [
+                4,
+                3,
+                -3
+            ],
+            "connections": [
+                "css"
+            ]
         },
         {
-          "id": "javascript",
-          "name": "JavaScript",
-          "position": [0, 0, 0],
-          "connections": ["react", "typescript", "nextjs"]
+            "id": "javascript",
+            "name": "JavaScript",
+            "position": [
+                0,
+                0,
+                0
+            ],
+            "connections": [
+                "react",
+                "typescript",
+                "nextjs"
+            ]
         },
         {
-          "id": "react",
-          "name": "React",
-          "position": [-2, 2, 1],
-          "connections": ["react-native", "react-three-fiber", "nextjs"]
+            "id": "react",
+            "name": "React",
+            "position": [
+                -2,
+                2,
+                1
+            ],
+            "connections": [
+                "react-native",
+                "react-three-fiber",
+                "nextjs"
+            ]
         },
         {
             "id": "redux",
             "name": "Redux",
-            "position": [-5, 1, 2],
-            "connections": ["react"]
-          },
-          {
+            "position": [
+                -5,
+                1,
+                2
+            ],
+            "connections": [
+                "react"
+            ]
+        },
+        {
             "id": "api Rest",
             "name": "API Rest",
-            "position": [-3, -3, 3],
-            "connections": ["react", "nextjs", "typescript"]
-          },
-        {
-          "id": "nextjs",
-          "name": "Next.js",
-          "position": [-4, -1, -1],
-          "connections": ["react"]
+            "position": [
+                -3,
+                -3,
+                3
+            ],
+            "connections": [
+                "react",
+                "nextjs",
+                "typescript"
+            ]
         },
         {
-          "id": "typescript",
-          "name": "TypeScript",
-          "position": [1, -2, 3],
-          "connections": ["react"]
+            "id": "nextjs",
+            "name": "Next.js",
+            "position": [
+                -4,
+                -1,
+                -1
+            ],
+            "connections": [
+                "react"
+            ]
         },
         {
-          "id": "react-native",
-          "name": "React Native",
-          "position": [-4, 4, 2],
-          "connections": []
+            "id": "typescript",
+            "name": "TypeScript",
+            "position": [
+                1,
+                -2,
+                3
+            ],
+            "connections": [
+                "react"
+            ]
         },
         {
-          "id": "react-three-fiber",
-          "name": "React Three Fiber",
-          "position": [-4, 3, -1],
-          "connections": []
+            "id": "react-native",
+            "name": "React Native",
+            "position": [
+                -4,
+                4,
+                2
+            ],
+            "connections": []
+        },
+        {
+            "id": "react-three-fiber",
+            "name": "React Three Fiber",
+            "position": [
+                -4,
+                3,
+                -1
+            ],
+            "connections": []
         }
     ],
     "skills": {
@@ -248,5 +316,62 @@
                 }
             ]
         }
+    },
+    "projects": {
+        "title": "Proyectos.",
+        "subtitle": "Lo que he construido",
+        "list": [
+            {
+                "title": "Origen Café",
+                "description": "Café de especialidad con molienda personalizada y envíos a domicilio.",
+                "link": "https://origencafe.vercel.app",
+                "image": "/images/projects/origencafe.png",
+                "tags": [
+                    "Next.js",
+                    "SASS",
+                    "E-commerce"
+                ]
+            },
+            {
+                "title": "Óptica Latina",
+                "description": "Catálogo online de armazones de alta calidad con integración de WhatsApp.",
+                "link": "https://opticalatina.vercel.app",
+                "image": "/images/projects/opticalatina.png",
+                "tags": [
+                    "React",
+                    "Landing Page"
+                ]
+            },
+            {
+                "title": "Camerata Vocalis",
+                "description": "Sitio institucional del coro Camerata Vocalis Buenos Aires.",
+                "link": "https://cameratavocalis.vercel.app",
+                "image": "/images/projects/cameratavocalis.png",
+                "tags": [
+                    "Next.js",
+                    "Institutional"
+                ]
+            },
+            {
+                "title": "Windbnb",
+                "description": "Un clon funcional de Airbnb construido con React enfocado en filtros dinámicos.",
+                "link": "https://my-windbnb.vercel.app",
+                "image": "/images/projects/windbnb.png",
+                "tags": [
+                    "React",
+                    "CSS Modules"
+                ]
+            },
+            {
+                "title": "My Wapp",
+                "description": "Clon de WhatsApp enfocado en la interfaz y experiencia de usuario.",
+                "link": "https://my-wapp.vercel.app",
+                "image": "/images/projects/mywapp.png",
+                "tags": [
+                    "React",
+                    "UX/UI"
+                ]
+            }
+        ]
     }
 }
