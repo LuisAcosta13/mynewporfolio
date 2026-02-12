@@ -21,7 +21,6 @@ function Reviews({ recommendations }) {
     autoplaySpeed: 5000,
     cssEase: "ease-out",
     pauseOnHover: true,
-    adaptiveHeight: true,
     responsive: [
       {
         breakpoint: 800,
@@ -30,7 +29,6 @@ function Reviews({ recommendations }) {
           slidesToScroll: 1,
           infinite: true,
           dots: true,
-          adaptiveHeight: true,
         }
       },
     ]

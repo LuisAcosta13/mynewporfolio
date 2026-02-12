@@ -117,7 +117,7 @@ function Connections({ from, to }) {
 export default function SkillMap({ skills }) {
   return (
     <Canvas className="SkillsMap" camera={{ position: [0, 0, 12], fov: 50 }}>
-      <OrbitControls minDistance={1} maxDistance={20} enableZoom={false} />
+      <OrbitControls minDistance={1} maxDistance={20} enableZoom={true} />
       <ambientLight intensity={0.4} />
       <pointLight position={[10, 10, 10]} intensity={1.5} />
       <directionalLight position={[0, 10, 0]} intensity={0.5} castShadow />
