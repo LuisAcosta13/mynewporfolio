@@ -329,8 +329,8 @@
                 "image": "/images/projects/origencafe.png",
                 "tags": [
                     "Next.js",
-                    "SASS",
-                    "E-commerce"
+                    "Tailwind",
+                    "Landing Page"
                 ]
             },
             {
@@ -339,8 +339,9 @@
                 "link": "https://opticalatina.vercel.app",
                 "image": "/images/projects/opticalatina.png",
                 "tags": [
-                    "React",
-                    "Landing Page"
+                    "Next.js",
+                    "Tailwind",
+                    "E-commerce"
                 ]
             },
             {
@@ -350,6 +351,7 @@
                 "image": "/images/projects/cameratavocalis.png",
                 "tags": [
                     "Next.js",
+                    "SCSS",
                     "Institutional"
                 ]
             },
@@ -360,7 +362,7 @@
                 "image": "/images/projects/windbnb.png",
                 "tags": [
                     "React",
-                    "CSS Modules"
+                    "CSS"
                 ]
             },
             {
@@ -370,7 +372,7 @@
                 "image": "/images/projects/mywapp.png",
                 "tags": [
                     "React",
-                    "UX/UI"
+                    "CSS"
                 ]
             }
         ]
