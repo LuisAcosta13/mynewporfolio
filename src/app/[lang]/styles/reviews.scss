@@ -88,12 +88,14 @@
 
                 .quote-icon {
                     position: absolute;
-                    top: 20px;
+                    top: 25px;
                     right: 25px;
-                    font-size: 40px;
-                    color: rgba(255, 255, 255, 0.1);
-                    transition: all 0.3s ease;
+                    font-size: 45px;
+                    color: rgba(140, 0, 255, 0.15);
+                    /* Subtly tinted Violet */
+                    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
                     pointer-events: none;
+                    z-index: 2;
                 }
 
                 .padding {
@@ -105,25 +107,26 @@
                     .header {
                         display: flex;
                         flex-direction: column;
-                        gap: 4px;
+                        gap: 2px;
 
                         .title {
-                            font-size: 22px;
-                            font-weight: 700;
-                            color: inherit;
+                            font-size: 26px;
+                            font-weight: 800;
+                            color: $base-color4;
+                            letter-spacing: -0.5px;
                         }
 
                         .subtitle {
                             font-size: 14px;
-                            color: rgba(255, 255, 255, 0.6);
-                            font-weight: 300;
+                            color: #999;
+                            font-weight: 400;
                         }
                     }
 
                     .recommendation-text {
                         font-size: 15px;
                         line-height: 1.6;
-                        color: #ffffff;
+                        color: #555;
                         margin: 0;
                         max-height: 200px;
                         overflow-y: auto;
@@ -144,158 +147,137 @@
                     }
                 }
             }
-        }
-    }
 
-    /* Slick Dots Custom Styling */
-    .slick-dots {
-        bottom: -40px;
+            /* Slick Dots Custom Styling */
+            .slick-dots {
+                bottom: -40px;
 
-        li {
-            button::before {
-                color: $base-color5;
-                font-size: 12px;
-                opacity: 0.25;
-            }
+                li {
+                    button::before {
+                        color: $base-color5;
+                        font-size: 12px;
+                        opacity: 0.25;
+                    }
 
-            &.slick-active button::before {
-                color: $base-color5;
-                opacity: 0.75;
-            }
-        }
-    }
-}
-
-@keyframes move-blobs {
-    0% {
-        transform: translate(0, 0) scale(1);
-    }
-
-    100% {
-        transform: translate(50px, 50px) scale(1.1);
-    }
-}
-
-/* Theme Integration via config.scss variables */
-body.dark {
-    .slider-container .slick-slide .card {
-        background: rgba(39, 39, 39, 0.4);
-        border: 1px solid rgba(255, 255, 255, 0.05);
-
-        &:hover {
-            background: rgba(39, 39, 39, 0.6);
-            border-color: rgba(140, 0, 255, 0.3);
-        }
-    }
-}
-
-body:not(.dark) {
-    .slider-container {
-        .background-blobs .blob {
-            opacity: 0.1;
-        }
-
-        .slick-dots li {
-            button::before {
-                color: $base-color4;
-            }
-
-            &.slick-active button::before {
-                color: $base-color4;
-            }
-        }
-
-        .slick-slide .card {
-            background: rgba(255, 255, 255, 0.7);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
-
-            &::before {
-                background: $base-color4;
-                /* Blue in light mode */
-            }
-
-            &::after {
-                background: linear-gradient(90deg,
-                        transparent,
-                        rgba(0, 0, 0, 0.03),
-                        transparent);
-            }
-
-            .header .title {
-                color: #222;
-                /* Darker for better contrast */
-            }
-
-            .header .subtitle {
-                color: #555;
-                /* Better contrast */
-            }
-
-            .recommendation-text {
-                color: #111;
-                font-weight: 500;
-                /* Significantly darker for readability */
-            }
-
-            .quote-icon {
-                color: rgba(0, 0, 0, 0.05);
-            }
-
-            &:hover {
-                background: rgba(255, 255, 255, 0.9);
-                border-color: $base-color4;
-
-                .quote-icon {
-                    color: $base-color4;
-                    /* Blue in light mode */
+                    &.slick-active button::before {
+                        color: $base-color5;
+                        opacity: 0.75;
+                    }
                 }
             }
         }
-    }
-}
 
-@media (max-width: 1100px) {
-    .slider-container {
-        padding: 0 20px;
-        margin-top: 60px;
+        @keyframes move-blobs {
+            0% {
+                transform: translate(0, 0) scale(1);
+            }
 
-        .background-blobs .blob {
-            filter: blur(50px);
+            100% {
+                transform: translate(50px, 50px) scale(1.1);
+            }
         }
 
-        .slick-list .slick-track {
-            gap: 20px;
-        }
-    }
-}
-
-@media (max-width: 800px) {
-    .slider-container {
-        padding: 0 10px;
-
-        .background-blobs {
-            display: none;
+        /* Theme Integration */
+        body.dark {
+            .slider-container .slick-slide .card {
+                &:hover {
+                    .quote-icon {
+                        color: $base-color5;
+                    }
+                }
+            }
         }
 
-        .slick-list .slick-track {
-            gap: 0;
-        }
-
-        .slick-slide {
-            padding: 0 5px;
-
-            .card {
-                .card-content {
-                    padding: 30px 20px;
+        body:not(.dark) {
+            .slider-container {
+                .background-blobs .blob {
+                    opacity: 0.1;
                 }
 
-                .quote-icon {
-                    font-size: 30px;
+                .slick-dots li {
+                    button::before {
+                        color: $base-color4;
+                    }
+
+                    &.slick-active button::before {
+                        color: $base-color4;
+                    }
                 }
 
-                .padding .header .title {
-                    font-size: 20px;
+                .slick-slide .card {
+                    .header .title {
+                        color: $base-color5;
+                        font-size: 26px;
+                    }
+
+                    .header .subtitle {
+                        color: #555;
+                    }
+
+                    .recommendation-text {
+                        color: #555;
+                        /* Blue + Grey text for Light Mode as requested */
+                        font-weight: 500;
+                    }
+
+                    .quote-icon {
+                        color: rgba(0, 102, 255, 0.1);
+                    }
+
+                    &:hover {
+                        .quote-icon {
+                            color: $base-color4;
+                            transform: scale(1.1) rotate(-10deg);
+                        }
+                    }
+                }
+            }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 1100px) {
+            .slider-container {
+                padding: 0 20px;
+                margin-top: 60px;
+
+                .background-blobs .blob {
+                    filter: blur(50px);
+                }
+
+                .slick-list .slick-track {
+                    gap: 20px;
+                }
+            }
+        }
+
+        @media (max-width: 800px) {
+            .slider-container {
+                padding: 0 10px;
+
+                .background-blobs {
+                    display: none;
+                }
+
+                .slick-list .slick-track {
+                    gap: 0;
+                }
+
+                .slick-slide {
+                    padding: 0 5px;
+
+                    .card {
+                        .card-content {
+                            padding: 30px 20px;
+                        }
+
+                        .quote-icon {
+                            font-size: 30px;
+                        }
+
+                        .padding .header .title {
+                            font-size: 20px;
+                        }
+                    }
                 }
             }
         }

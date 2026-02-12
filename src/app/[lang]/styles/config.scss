@@ -183,7 +183,7 @@ body {
 
             .slider-container {
                 .card {
-                    background: $base-color11;
+                    // Removed background override to allow premium-card shimmer effect
                 }
             }
         }
@@ -209,7 +209,6 @@ body {
 
             .skills_list {
                 .skill_card {
-                    background: rgba(39, 39, 39, 0.6);
                     border-color: rgba(255, 255, 255, 0.05);
 
                     &:hover {
