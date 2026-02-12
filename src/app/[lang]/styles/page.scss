@@ -129,8 +129,9 @@
                 position: relative;
                 font-family: serif;
                 border-radius: 20px;
-                padding: 40px;
-                max-width: 100%;
+                padding: 40px 30px;
+                max-width: 90%;
+                margin: 0 20px;
                 word-break: break-word;
 
                 &:hover {
@@ -181,9 +182,11 @@
                 align-items: flex-start;
                 justify-content: center;
                 flex-wrap: wrap;
-                gap: 20px;
-                margin-top: 50px;
+                gap: 15px;
+                margin-top: 40px;
                 width: 100%;
+                padding: 0 20px;
+                box-sizing: border-box;
 
                 button {
                     @include premium-card;
@@ -243,7 +246,8 @@
         font-size: 1.15rem;
         line-height: 1.8;
         color: #333;
-        max-width: 600px;
+        max-width: 700px;
+        width: 100%;
 
         p {
             margin-bottom: 20px;
@@ -320,11 +324,11 @@
                 margin-left: 50px;
 
                 .title-name {
-                    font-size: 40px;
+                    font-size: 32px;
                 }
 
                 .title-rol {
-                    font-size: 20px;
+                    font-size: 18px;
                 }
             }
         }
@@ -379,7 +383,7 @@
                     border-radius: 20px;
 
                     .title-name {
-                        font-size: 1.2rem;
+                        font-size: 1.1rem;
                         line-height: 1.4;
                     }
 

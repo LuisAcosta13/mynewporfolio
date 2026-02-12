@@ -27,8 +27,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 100px auto;
-    padding: 80px 40px;
+    margin: 60px auto;
+    padding: 60px 20px;
     max-width: 1200px;
     background-color: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(15px);
@@ -111,10 +111,14 @@
                 border: 1px solid rgba(255, 255, 255, 0.2);
                 color: $base-color8;
                 font-size: 0.85rem;
-                font-weight: 500;
+                font-weight: 600;
                 pointer-events: none;
-                white-space: nowrap;
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+                white-space: normal;
+                text-align: center;
+                max-width: 250px;
+                width: 85%;
+                line-height: 1.4;
+                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
                 opacity: 0;
                 animation: fadeInOut 4s ease-in-out infinite alternate;
 
@@ -139,7 +143,7 @@
 
             .timeline-line {
                 position: absolute;
-                left: 10px;
+                left: 15px;
                 top: 10px;
                 bottom: 10px;
                 width: 2px;
@@ -174,7 +178,7 @@
 
                     .job-dot {
                         position: absolute;
-                        left: -35px;
+                        left: -30px;
                         top: 25px;
                         width: 12px;
                         height: 12px;
@@ -230,8 +234,11 @@
 
             .tools {
                 width: 100%;
-                min-height: 300px;
+                min-height: 350px;
+                height: 400px;
                 order: 2;
+                margin-top: -20px;
+                position: relative;
             }
 
             .jobs-section {
@@ -262,7 +269,7 @@
                 padding-left: 20px;
 
                 .timeline-line {
-                    left: 0;
+                    left: 2px;
                 }
 
                 .jobs-list .job-card {

@@ -5,8 +5,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 110px 0px 50px;
-    padding: 80px 20px;
+    margin: 60px 0px 50px;
+    padding: 60px 20px;
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -189,49 +189,6 @@ body.dark {
             }
         }
 
-        .project_card {
-            color: $base-color1;
-
-            .project_info {
-                .project_name {
-                    color: $base-color5;
-                }
-
-                .project_description {
-                    color: #bbb;
-                }
-
-                .tag {
-                    background-color: rgba(140, 0, 255, 0.15);
-                    border: 1px solid rgba(140, 0, 255, 0.3);
-                    color: $base-color5;
-                }
-            }
-
-            .project_image {
-                .project_img {
-                    filter: brightness(0.8) contrast(1.2);
-                }
-
-                .image_placeholder {
-                    background-color: #1a1a1a;
-                    color: $base-color5;
-                }
-            }
-
-            &:hover {
-                .project_image {
-                    .project_img {
-                        filter: brightness(1) contrast(1);
-                    }
-
-                    .image_placeholder {
-                        background-color: $base-color5;
-                        color: white;
-                    }
-                }
-            }
-        }
     }
 }
 

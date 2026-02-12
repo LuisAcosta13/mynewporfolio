@@ -1,7 +1,7 @@
 @import "config.scss";
 
 .slider-container {
-    margin: 110px auto 0;
+    margin: 60px auto 0;
     width: 100%;
     position: relative;
     padding: 0 20px;
@@ -99,7 +99,7 @@
                     &:hover {
                         color: $base-color4;
                         transform: scale(1.1) rotate(-10deg);
-                        
+
                     }
                 }
 
