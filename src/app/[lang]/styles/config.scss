@@ -147,6 +147,9 @@ body {
         }
 
         .skills {
+            background-color: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
 
             .skills_title {
                 .subtitle {
@@ -154,20 +157,42 @@ body {
                 }
 
                 .title {
+                    color: $base-color1;
+
                     &::after {
                         background-color: $base-color5;
                     }
                 }
             }
 
-            .skills_list .skill_card {
+            .skills_list {
+                .skill_card {
+                    background: rgba(39, 39, 39, 0.6);
+                    border-color: rgba(255, 255, 255, 0.05);
 
-                &:nth-child(odd) {
-                    background: linear-gradient(0deg, rgba(41, 35, 102, 0.8113446062018558) 30%, rgba(247, 247, 247, 0) 100%);
-                }
+                    &:hover {
+                        background: rgba(39, 39, 39, 0.95);
+                        border-color: $base-color5;
+                        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 
-                &:nth-child(even) {
-                    background: $base-color11;
+                        .header svg {
+                            color: $base-color5;
+                        }
+                    }
+
+                    .header {
+                        svg {
+                            color: $base-color5;
+                        }
+
+                        .card_title {
+                            color: #eee;
+                        }
+                    }
+
+                    .card_text {
+                        color: #bbb;
+                    }
                 }
             }
         }
